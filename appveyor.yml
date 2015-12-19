@@ -30,8 +30,12 @@ matrix:
   fast_finish: true  
 
 install:
-#  - c:\cygwin\setup-x86.exe -B -q -n -N -d -l c:\cygwin -R c:\cygwin -s http://mirror.csclub.uwaterloo.ca/cygwin  -P unzip
-#  - c:\cygwin\bin\unzip.exe --help
+  - c:\cygwin\setup-x86.exe -B -q -n -N -d -l c:\cygwin -R c:\cygwin -s http://mirror.csclub.uwaterloo.ca/cygwin  -P make
+  - c:\cygwin\bin\make.exe --help
+  
+  - c:\cygwin\setup-x86.exe -B -q -n -N -d -l c:\cygwin -R c:\cygwin -s http://mirror.csclub.uwaterloo.ca/cygwin  -P binutils
+  - c:\cygwin\bin\make.exe --help
+  
   - set PATH=C:\ProgramData\chocolatey\bin;%PATH%
   - ps: |
         if (Test-Path "C:\Poco\1.6.1") {
