@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ISO-8583-MSG-1987" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ISO-8583-MSG-1987" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ISO-8583-MSG-1987" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fPIC" />
+			<Add option="-fexceptions" />
+			<Add option="-Wno-sign-compare" />
+			<Add option="-Wno-non-template-friend" />
+			<Add option="-Wno-cpp" />
+			<Add option="-Wno-switch" />
+			<Add option="-fmessage-length=0" />
+			<Add option="-fpermissive" />
+			<Add option="-DVRM_ISO_8583=1987" />
+			<Add directory="../../inc" />
+		</Compiler>
+		<Unit filename="../../code/ISO-8583/MSG/AdministrativeAdvice.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/AdministrativeAdviceResponse.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/AdministrativeInstruction.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/AdministrativeInstructionAcknowledge.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/AdministrativeNotification.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/AdministrativeNotificationAcknowledge.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/AdministrativeRequest.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/AdministrativeRequestResponse.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/AuthorizationAdvice.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/AuthorizationAdviceResponse.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/AuthorizationInstruction.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/AuthorizationInstructionAcknowledge.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/AuthorizationNotification.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/AuthorizationNotificationAcknowledge.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/AuthorizationRequest.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/AuthorizationRequestResponse.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/Exception.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/Factory.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/FileActionAdvice.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/FileActionAdviceResponse.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/FileActionInstruction.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/FileActionInstructionAcknowledge.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/FileActionNotification.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/FileActionNotificationAcknowledge.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/FileActionRequest.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/FileActionRequestResponse.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/FinancialAdvice.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/FinancialAdviceResponse.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/FinancialInstruction.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/FinancialInstructionAcknowledge.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/FinancialNotification.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/FinancialNotificationAcknowledge.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/FinancialRequest.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/FinancialRequestResponse.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/ISO-8583-MSG.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/MTI.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/Message.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/NetworkAdvice.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/NetworkAdviceResponse.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/NetworkChannel.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/NetworkInstruction.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/NetworkInstructionAcknowledge.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/NetworkNotification.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/NetworkNotificationAcknowledge.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/NetworkRequest.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/NetworkRequestResponse.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/ReconciliationAdvice.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/ReconciliationAdviceResponse.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/ReconciliationInstruction.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/ReconciliationInstructionAcknowledge.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/ReconciliationNotification.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/ReconciliationNotificationAcknowledge.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/ReconciliationRequest.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/ReconciliationRequestResponse.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/Request.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/RequestResponse.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/ReversalAdvice.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/ReversalAdviceResponse.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/ReversalInstruction.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/ReversalInstructionAcknowledge.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/ReversalNotification.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/ReversalNotificationAcknowledge.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/ReversalRequest.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/ReversalRequestResponse.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/SocketChannel.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/TestEchoRequest.cpp" />
+		<Unit filename="../../code/ISO-8583/MSG/TestEchoRequestResponse.cpp" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

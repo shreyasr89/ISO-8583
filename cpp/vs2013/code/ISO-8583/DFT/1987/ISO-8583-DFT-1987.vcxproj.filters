@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="ISO-8583-DFT.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DFT\DefaultFactory.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DFT\DefaultImplementation.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DFT\DefaultAuthorizationRequest.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DFT\DefaultAuthorizationRequestResponse.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DFT\ISO-8583-DFT.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DFT\DefaultImplementation.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DFT\DefaultFactory.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DFT\DefaultAuthorizationRequest.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DFT\DefaultAuthorizationRequestResponse.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{11b9239c-bcc2-462c-adc5-12c0a04c5b5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{8d1b9a68-2c4e-4e28-8574-e9cc86e220ea}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

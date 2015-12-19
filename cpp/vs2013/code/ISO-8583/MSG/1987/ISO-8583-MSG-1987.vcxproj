@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EE854C6B-4290-4362-8C66-CB558BB86C82}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ISO8583MSG1987</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <Import Project="$(SolutionDir)\solution.props" Condition="exists('$(SolutionDir)\solution.props')" Label="solutionPlatform" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;STD_ISO_8583=1987;ISO_8583_MSG_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)/$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;STD_ISO_8583=1987;ISO_8583_MSG_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)/$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;STD_ISO_8583=1987;ISO_8583_MSG_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)/$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;STD_ISO_8583=1987;ISO_8583_MSG_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)/$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\AdministrativeAdvice.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\AdministrativeAdviceResponse.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\AdministrativeInstruction.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\AdministrativeInstructionAcknowledge.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\AdministrativeNotification.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\AdministrativeNotificationAcknowledge.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\AdministrativeRequest.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\AdministrativeRequestResponse.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\Advice.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\AdviceResponse.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\AuthorizationAdvice.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\AuthorizationAdviceResponse.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\AuthorizationInstruction.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\AuthorizationInstructionAcknowledge.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\AuthorizationNotification.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\AuthorizationNotificationAcknowledge.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\AuthorizationRequest.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\AuthorizationRequestResponse.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\Channel.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\Factory.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\FileActionAdvice.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\FileActionInstruction.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\FileActionInstructionAcknowledge.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\FileActionNotification.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\FileActionNotificationAcknowledge.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\FileActionRequest.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\FinancialAdviceResponse.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\FinancialRequest.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\FinancialRequestResponse.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\Instruction.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\InstructionAcknowledge.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\ISO-8583-MSG.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\Message.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\MTI.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\NetworkAdvice.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\NetworkAdviceResponse.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\NetworkChannel.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\NetworkInstruction.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\NetworkInstructionAcknowledge.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\NetworkNotification.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\NetworkNotificationAcknowledge.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\NetworkRequest.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\NetworkRequestResponse.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\Notification.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\NotificationAcknowledge.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\ReconciliationAdvice.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\ReconciliationAdviceResponse.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\ReconciliationInstruction.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\ReconciliationInstructionAcknowledge.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\ReconciliationNotification.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\ReconciliationNotificationAcknowledge.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\ReconciliationRequest.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\ReconciliationRequestResponse.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\Request.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\RequestResponse.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\ReversalAdvice.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\ReversalAdviceResponse.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\ReversalInstruction.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\ReversalInstructionAcknowledge.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\ReversalNotificationAcknowledge.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\ReversalRequest.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\ReversalRequestResponse.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\SocketChannel.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\TestEchoRequest.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\MSG\TestEchoRequestResponse.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\AdministrativeAdvice.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\AdministrativeAdviceResponse.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\AdministrativeInstruction.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\AdministrativeInstructionAcknowledge.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\AdministrativeNotification.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\AdministrativeNotificationAcknowledge.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\AdministrativeRequest.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\AdministrativeRequestResponse.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\AuthorizationAdvice.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\AuthorizationAdviceResponse.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\AuthorizationInstruction.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\AuthorizationInstructionAcknowledge.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\AuthorizationNotification.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\AuthorizationNotificationAcknowledge.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\AuthorizationRequest.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\AuthorizationRequestResponse.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\Exception.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\Factory.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\FileActionAdvice.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\FileActionAdviceResponse.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\FileActionInstruction.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\FileActionInstructionAcknowledge.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\FileActionNotification.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\FileActionNotificationAcknowledge.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\FileActionRequest.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\FileActionRequestResponse.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\FinancialAdvice.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\FinancialAdviceResponse.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\FinancialInstruction.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\FinancialInstructionAcknowledge.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\FinancialNotification.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\FinancialNotificationAcknowledge.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\FinancialRequest.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\FinancialRequestResponse.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\ISO-8583-MSG.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\Message.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\MTI.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\NetworkAdvice.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\NetworkAdviceResponse.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\NetworkChannel.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\NetworkInstruction.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\NetworkInstructionAcknowledge.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\NetworkNotification.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\NetworkNotificationAcknowledge.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\NetworkRequest.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\NetworkRequestResponse.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\ReconciliationAdvice.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\ReconciliationAdviceResponse.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\ReconciliationInstruction.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\ReconciliationInstructionAcknowledge.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\ReconciliationNotification.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\ReconciliationNotificationAcknowledge.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\ReconciliationRequest.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\ReconciliationRequestResponse.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\Request.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\RequestResponse.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\ReversalAdvice.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\ReversalAdviceResponse.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\ReversalInstruction.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\ReversalInstructionAcknowledge.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\ReversalNotification.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\ReversalNotificationAcknowledge.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\ReversalRequest.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\ReversalRequestResponse.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\SocketChannel.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\TestEchoRequest.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\MSG\TestEchoRequestResponse.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

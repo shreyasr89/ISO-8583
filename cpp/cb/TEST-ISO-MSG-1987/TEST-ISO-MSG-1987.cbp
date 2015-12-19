@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="TEST-ISO-MSG-1987" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../../bin64/TEST-ISO-MSG-1987d" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="../../inc" />
+				</Compiler>
+				<Linker>
+					<Add library="ISO-8583-DFT-1987d" />
+					<Add library="ISO-8583-MSG-1987d" />
+					<Add library="ISO-8583-DTE-1987d" />
+					<Add library="ISO-8583-DTTd" />
+					<Add directory="/home/francis/git/ISO-8583/cpp/lib64" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="../../bin64/TEST-ISO-MSG-1987" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add option="-Wno-sign-compare" />
+			<Add option="-Wno-non-template-friend" />
+			<Add option="-Wno-cpp" />
+			<Add option="-Wno-usnused-variable" />
+			<Add option="-fmessage-length=0" />
+			<Add option="-fpermissive" />
+			<Add option="-DVRM_ISO_8583=1987" />
+		</Compiler>
+		<Unit filename="../../test/ISO-8583/MSG/AuthorizationRequestTest.cpp" />
+		<Unit filename="../../test/ISO-8583/MSG/AuthorizationRequestTest.h" />
+		<Unit filename="../../test/ISO-8583/MSG/Driver.cpp" />
+		<Unit filename="../../test/ISO-8583/MSG/ISO-8583-MSG-TestSuite.cpp" />
+		<Unit filename="../../test/ISO-8583/MSG/ISO-8583-MSG-TestSuite.h" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

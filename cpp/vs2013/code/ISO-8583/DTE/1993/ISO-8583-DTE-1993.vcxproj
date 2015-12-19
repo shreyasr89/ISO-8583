@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\AccountIdentification1.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\AccountIdentification2.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\AcquiringInstitutionCountryCode.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\AcquiringInstitutionIdentificationCode.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\AdditionalAmounts.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\AdditionalDataNational.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\AdditionalDataPrivate.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\AdditionalResponseData.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\AuthorizationIdentificationResponse.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\AuthorizationIdentificationResponseLength.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\Bitmap.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\CaptureDate.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\CardAcceptorIdentificationCode.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\CardAcceptorNameOrlocation.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\CardAcceptorTerminalIdentification.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\CardHolderBillingAmount.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\CardHolderBillingConversionRate.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\CardHolderBillingCurrencyCode.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\CardholderBillingFeeAmount.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\CardIssuerReferenceData.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\CardSequenceNumber.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\Constructed.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\ConversionDate.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\DataElement.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\ExpirationDate.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\SettlementDate.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\Exception.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\Field.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\FileName.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\ForwardingInstitutionCountryCode.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\ForwardingInstitutionIdentificationCode.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\MACField.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\MerchantType.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\NationalData.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\NetworkInternationalIdentifier.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\OriginalDataElements.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\Payee.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\PINData.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\PointOfServiceConditionCode.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\PointOfServiceEntryMode.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\PointOfServicePINCaptureCode.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\PrimaryAccountNumber.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\PrimaryAccountNumberCountryCode.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\PrimaryAccountNumberExtended.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\ProcessingCode.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\ReceivingInstitutionIdentificationCode.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\ResponseCode.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\RetrievalReferenceNumber.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\SecurityRelatedControlInformation.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\ServiceRestrictionCode.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\SettlementAmount.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\SettlementConversionRate.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\SettlementCurrencyCode.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\SettlementFeeAmount.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\SettlementInstitutionIdentificationCode.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\SettlementProcessingFeeAmount.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\SystemsTraceAuditNumber.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\Tag.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\TLV.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\Track1Data.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\Track2Data.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\Track3Data.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\TransactionAmount.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\TransactionCurrencyCode.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\TransactionFeeAmount.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\TransactionLocalDate.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\TransactionLocalTime.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\TransactionProcessingFeeAmount.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\TransactionProcessingFeeAmout.cpp" />
+    <ClCompile Include="..\..\..\..\..\code\ISO-8583\DTE\TransmissionDateAndTime.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\AccountIdentification1.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\AccountIdentification2.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\AcquiringInstitutionCountryCode.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\AcquiringInstitutionIdentificationCode.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\AdditionalAmounts.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\AdditionalDataNational.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\AdditionalDataPrivate.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\AdditionalResponseData.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\AuthorizationIdentificationResponse.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\AuthorizationIdentificationResponseLength.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\Bitmap.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\CardAcceptorIdentificationCode.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\CardAcceptorNameOrlocation.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\CardAcceptorTerminalIdentification.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\CardHolderBillingAmount.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\CardHolderBillingConversionRate.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\CardHolderBillingCurrencyCode.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\CardholderBillingFeeAmount.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\CardIssuerReferenceData.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\CardSequenceNumber.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\Constructed.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\DataElement.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\Exception.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\ExpirationDate.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\Field.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\FileName.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\ForwardingInstitutionCountryCode.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\ForwardingInstitutionIdentificationCode.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\MACField.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\MerchantType.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\NationalData.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\NetworkInternationalIdentifier.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\OriginalDataElements.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\Payee.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\PINData.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\PointOfServiceConditionCode.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\PointOfServiceEntryMode.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\PointOfServicePINCaptureCode.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\PrimaryAccountNumber.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\PrimaryAccountNumberCountryCode.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\PrimaryAccountNumberExtended.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\ProcessingCode.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\ReceivingInstitutionIdentificationCode.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\ResponseCode.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\RetrievalReferenceNumber.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\SecurityRelatedControlInformation.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\ServiceRestrictionCode.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\SettlementAmount.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\SettlementConversionRate.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\SettlementCurrencyCode.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\SettlementFeeAmount.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\SettlementInstitutionIdentificationCode.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\SettlementProcessingFeeAmount.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\SystemsTraceAuditNumber.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\Tag.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\TLV.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\Track1Data.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\Track2Data.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\Track3Data.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\TransactionAmount.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\TransactionCurrencyCode.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\TransactionFeeAmount.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\TransactionLocalDate.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\TransactionLocalTime.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\TransactionProcessingFeeAmount.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\TransactionProcessingFeeAmout.h" />
+    <ClInclude Include="..\..\..\..\..\inc\ISO-8583\DTE\TransmissionDateAndTime.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9761A6BD-CEAB-4986-B876-9D9496F4A9B7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ISO8583DTE2003</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <Import Project="$(SolutionDir)\solution.props" Condition="exists('$(SolutionDir)\solution.props')" Label="solutionPlatform" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;STD_ISO_8583=1993;ISO_8583_DTE_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)/$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;STD_ISO_8583=1993;ISO_8583_DTE_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)/$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;STD_ISO_8583=1993;ISO_8583_DTE_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)/$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;STD_ISO_8583=1993;ISO_8583_DTE_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)/$(Configuration)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

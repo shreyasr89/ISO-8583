@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ISO-8583-CLI-1897" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ISO-8583-CLI-1897" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add library="ISO-8583-DFT-1987d" />
+					<Add library="ISO-8583-MSG-1987d" />
+					<Add library="ISO-8583-DTE-1987d" />
+					<Add library="ISO-8583-DTTd" />
+					<Add library="PocoUtild" />
+					<Add library="PocoXMLd" />
+					<Add library="PocoJSONd" />
+					<Add library="PocoNetd" />
+					<Add library="PocoFoundationd" />
+					<Add directory="../ISO-8583-DFT-1987/bin/Debug" />
+					<Add directory="../ISO-8583-MSG-1987/bin/Debug" />
+					<Add directory="../ISO-8583-DTE-1987/bin/Debug" />
+					<Add directory="../ISO-8583-DTT/bin/Debug" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ISO-8583-CLI-1897" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c++11" />
+			<Add option="-Wall" />
+			<Add option="-Wno-sign-compare" />
+			<Add option="-Wno-non-template-friend" />
+			<Add option="-Wno-cpp" />
+			<Add option="-Wno-switch" />
+			<Add option="-fmessage-length=0" />
+			<Add option="-fpermissive" />
+			<Add option="-DVRM_ISO_8583=1987" />
+			<Add directory="../../inc" />
+		</Compiler>
+		<Linker>
+			<Add directory="../../../../../pocozos/lib/Linux/x86_64" />
+		</Linker>
+		<Unit filename="../../code/ISO-8583/CLI/ISO-8583-CLI-1987.cpp" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

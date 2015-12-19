@@ -1,0 +1,426 @@
+# depslib dependency file v1.0
+1442506631 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/Alphabetic.cpp
+	<ctype.h>
+	<iostream>
+	<sstream>
+	"ISO-8583/DTT/Alphabetic.h"
+	"ISO-8583/DTT/Exception.h"
+
+1442506631 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/AlphaNumeric.cpp
+	<iostream>
+	<sstream>
+	<stdexcept>
+	"ISO-8583/DTT/AlphaNumeric.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/AlphaNumericSpace.cpp
+	<iostream>
+	<stdexcept>
+	"ISO-8583/DTT/AlphaNumericSpace.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/AlphaNumericBinary.cpp
+	<iostream>
+	<stdexcept>
+	"ISO-8583/DTT/AlphaNumericBinary.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/AlphaNumericBinary.h
+	<iostream>
+	<string>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/Bytes.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442506631 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/ISO-8583-DTT.h
+	<cstddef>
+	<cstdint>
+	<string>
+	"Poco/Platform.h"
+	"Poco/Platform_WIN32.h"
+	"Poco/Platform_VMS.h"
+	"Poco/Platform_VX.h"
+	"Poco/Platform_POSIX.h"
+	"ISO-8583/DTT/endian.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/endian.h
+	<stdint.h>
+	<sys/endian.h>
+	<machine/endian.h>
+	<endian.h>
+	<byteswap.h>
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Bytes.h
+	<cstring>
+	<string>
+	<algorithm>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/Exception.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Exception.h
+	<stdexcept>
+	<string>
+	"ISO-8583-DTT.h"
+
+1442506631 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/BinaryInputStream.h
+	<ios>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/Platform.h"
+	"ISO-8583/DTT/Buffer.h"
+
+1442506631 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Platform.h
+
+1442506631 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Buffer.h
+	<stdexcept>
+	<string>
+	"ISO-8583-DTT.h"
+
+1442506631 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/BinaryOutputStream.h
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/Buffer.h"
+	"ISO-8583/DTT/Platform.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/AlphaNumericSpace.h
+	<iostream>
+	<string>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/Bytes.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/AlphaNumericSpecial.cpp
+	<iostream>
+	<stdexcept>
+	"ISO-8583/DTT/AlphaNumericSpecial.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/AlphaNumericSpecial.h
+	<iostream>
+	<string>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/Bytes.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/Bitmaps.cpp
+	<stdexcept>
+	<climits>
+	<cstdint>
+	<cstdarg>
+	<cassert>
+	"ISO-8583/DTT/Bitmaps.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Bitmaps.h
+	<iostream>
+	<bitset>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/Bytes.cpp
+	<cassert>
+	<memory>
+	<iostream>
+	<sstream>
+	<stdexcept>
+	"ISO-8583/DTT/Bytes.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/Exception.cpp
+	"ISO-8583/DTT/Exception.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/ISO-8583-DTT.cpp
+	<string>
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+	<algorithm>
+	<stdexcept>
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/LL.cpp
+	<iostream>
+	"ISO-8583/DTT/LL.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LL.h
+	<iostream>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/LLAlphabetic.cpp
+	<iostream>
+	<stdexcept>
+	"ISO-8583/DTT/LLAlphabetic.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLAlphabetic.h
+	<iostream>
+	<string>
+	"ISO-8583/DTT/LL.h"
+	"ISO-8583/DTT/Alphabetic.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Alphabetic.h
+	<iostream>
+	<string>
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+	"ISO-8583/DTT/Bytes.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/LLAlphaNumeric.cpp
+	<iostream>
+	<stdexcept>
+	"ISO-8583/DTT/LLAlphaNumeric.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLAlphaNumeric.h
+	<iostream>
+	<string>
+	"ISO-8583/DTT/LL.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/AlphaNumeric.h
+	<iostream>
+	<string>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/Bytes.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/LLAlphaNumericSpace.cpp
+	<stdexcept>
+	"ISO-8583/DTT/LLAlphaNumericSpace.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLAlphaNumericSpace.h
+	<string>
+	"ISO-8583/DTT/LL.h"
+	"ISO-8583/DTT/AlphaNumericSpace.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/LLAlphaNumericSpecial.cpp
+	<stdexcept>
+	"ISO-8583/DTT/LLAlphaNumericSpecial.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLAlphaNumericSpecial.h
+	<iostream>
+	<string>
+	"ISO-8583/DTT/LL.h"
+	"ISO-8583/DTT/AlphaNumericSpecial.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/LLBytes.cpp
+	<iostream>
+	<stdexcept>
+	"ISO-8583/DTT/LLBytes.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLBytes.h
+	<iostream>
+	<string>
+	"ISO-8583/DTT/LL.h"
+	"ISO-8583/DTT/Bytes.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/LLL.cpp
+	<iostream>
+	"ISO-8583/DTT/LLL.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLL.h
+	<iostream>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/LLLAlphaNumeric.cpp
+	<stdexcept>
+	"ISO-8583/DTT/LLLAlphaNumeric.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLLAlphaNumeric.h
+	"ISO-8583/DTT/LLL.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/LLLAlphaNumericSpecial.cpp
+	<iostream>
+	<stdexcept>
+	"ISO-8583/DTT/LLLAlphaNumericSpecial.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLLAlphaNumericSpecial.h
+	<iostream>
+	<string>
+	"ISO-8583/DTT/LLL.h"
+	"ISO-8583/DTT/AlphaNumericSpecial.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/LLLBytes.cpp
+	<iostream>
+	<stdexcept>
+	"ISO-8583/DTT/LLLBytes.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLLBytes.h
+	<iostream>
+	<string>
+	"ISO-8583/DTT/LLL.h"
+	"ISO-8583/DTT/Bytes.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/LLLL.cpp
+	<iostream>
+	"ISO-8583/DTT/LLLL.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLLL.h
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/LLLLAlphaNumericSpecial.cpp
+	<iostream>
+	<stdexcept>
+	"ISO-8583/DTT/LLLLAlphaNumericSpecial.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLLLAlphaNumericSpecial.h
+	"ISO-8583/DTT/LLLL.h"
+	"ISO-8583/DTT/AlphaNumericSpecial.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/LLLLBytes.cpp
+	<iostream>
+	<stdexcept>
+	"ISO-8583/DTT/LLLLBytes.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLLLBytes.h
+	<iostream>
+	<string>
+	"ISO-8583/DTT/LLLL.h"
+	"ISO-8583/DTT/Bytes.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/LLNumeric.cpp
+	<iostream>
+	<stdexcept>
+	"ISO-8583/DTT/LLNumeric.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLNumeric.h
+	"ISO-8583/DTT/LL.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Numeric.h
+	<iostream>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/Exception.h"
+	"ISO-8583/DTT/Bytes.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/LLNumericSpecial.cpp
+	"ISO-8583/DTT/LLNumericSpecial.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLNumericSpecial.h
+	"ISO-8583/DTT/LL.h"
+	"ISO-8583/DTT/NumericSpecial.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/NumericSpecial.h
+	"ISO-8583/DTT/Numeric.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/Numeric.cpp
+	<algorithm>
+	<iostream>
+	<stdexcept>
+	<cassert>
+	<limits>
+	"ISO-8583/DTT/Numeric.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/NumericSpecial.cpp
+	"ISO-8583/DTT/NumericSpecial.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/SignedNumeric.cpp
+	<stdexcept>
+	"ISO-8583/DTT/SignedNumeric.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/SignedNumeric.h
+	"ISO-8583/DTT/Numeric.h"
+
+1442494607 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/Zoned.cpp
+	<algorithm>
+	<iostream>
+	<stdexcept>
+	<cassert>
+	<limits>
+	"ISO-8583/DTT/Zoned.h"
+
+1442494607 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Zoned.h
+	<iostream>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/Exception.h"
+	"ISO-8583/DTT/Bytes.h"
+
+1442506631 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/BinaryInputOutputStream.cpp
+	"ISO-8583/DTT/BinaryInputOutputStream.h"
+
+1442506631 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/BinaryInputOutputStream.h
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442591177 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/BinaryInputStream.cpp
+	<cstring>
+	"ISO-8583/DTT/BinaryInputStream.h"
+
+1442591177 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/BinaryOutputStream.cpp
+	<cstring>
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442506631 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/Buffer.cpp
+	<cassert>
+	<climits>
+	"ISO-8583/DTT/Buffer.h"
+
+1442506631 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/Century.cpp
+	<cassert>
+	"ISO-8583/DTT/Century.h"
+
+1442506631 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Century.h
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442506631 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/Day.cpp
+	<cassert>
+	"ISO-8583/DTT/Day.h"
+
+1442506631 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Day.h
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442506631 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/Hour.cpp
+	<cassert>
+	"ISO-8583/DTT/Hour.h"
+
+1442506631 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Hour.h
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442506631 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/Millisecond.cpp
+	<cassert>
+	"ISO-8583/DTT/Millisecond.h"
+
+1442506631 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Millisecond.h
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442506631 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/Minute.cpp
+	<cassert>
+	"ISO-8583/DTT/Minute.h"
+
+1442506631 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Minute.h
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442506631 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/Month.cpp
+	<cassert>
+	"ISO-8583/DTT/Month.h"
+
+1442506631 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Month.h
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442506631 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/Range.cpp
+	"ISO-8583/DTT/Range.h"
+
+1442506631 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Range.h
+
+1442506631 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/Second.cpp
+	<cassert>
+	"ISO-8583/DTT/Second.h"
+
+1442506631 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Second.h
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442506631 source:/home/francis/git/ISO-8583/cpp/code/ISO-8583/DTT/Year.cpp
+	<cassert>
+	"ISO-8583/DTT/Year.h"
+
+1442506631 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Year.h
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+	"ISO-8583/DTT/Numeric.h"
+

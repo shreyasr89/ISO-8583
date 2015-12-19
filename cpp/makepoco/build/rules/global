@@ -1,0 +1,303 @@
+#
+# $Id: //poco/1.4/build/rules/global#1 $
+#
+# global
+#
+# Global build configuration
+#
+# Environment variables:
+# BASE:   Path to ISO8583 source tree. Must be defined.
+# BUILD:  Path to directory where build files are put.
+#              Defaults to $(BASE)
+# CONFIG: Build configuration to use.
+#              Defaults to `uname`.
+# TARGET_OSNAME: Target system operating system name (for cross builds)
+# TARGET_OSARCH: Target system architecture (forr cross builds)
+#
+
+#
+# Check for BASE
+#
+ifndef BASE
+$(error BASE is not defined.)
+endif
+
+#
+# Include some optional make configuration
+#
+sinclude $(BASE)/config.make
+
+#
+# Check for PROJECT_BASE
+#
+ifndef PROJECT_BASE
+PROJECT_BASE = $(BASE)
+endif
+export PROJECT_BASE
+
+#
+# Check for BUILD
+#
+ifndef BUILD
+BUILD = $(PROJECT_BASE)
+endif
+export BUILD
+
+#
+# BASE/BUILD/cwd sanity checks
+#
+# Ensure that the current working directory is either
+# under $BASE or under $PROJECT_BASE
+# Also, if we're building under $BASE, disarm
+# $PROJECT_BASE
+#
+cwd = $(shell pwd)
+inpoco = $(shell echo | awk '{print index("$(cwd)","$(BASE)")}')
+inproj = $(shell echo | awk '{print index("$(cwd)","$(PROJECT_BASE)")}')
+ifneq ($(inpoco),0)
+PROJECT_BASE = $(BASE)
+else
+ifneq ($(inproj),0)
+else
+$(error Current working directory not under $$PROJECT_BASE)
+endif
+endif
+
+#
+# Determine OS
+#
+HOST_OSNAME = $(shell uname)
+ifeq ($(findstring CYGWIN,$(HOST_OSNAME)),CYGWIN)
+ifeq ($(findstring x86_64,$(HOST_OSNAME)),x86_64)
+OSARCH_64BITS = 1
+endif
+HOST_OSNAME = Cygwin
+endif
+
+ifeq ($(findstring MINGW,$(HOST_OSNAME)),MINGW)
+HOST_OSNAME = MinGW
+endif
+HOST_OSARCH ?= $(subst /,-,$(shell uname -m | tr ' ' _))
+
+#
+# Begin Sun platforms
+#
+# Pure Solaris or GNU (Nexenta), Sun Forte and Sun Studio compilers supported
+# (on Nexenta, the default compiler is g++)
+#
+ifndef CONFIG
+  ifeq ($(findstring SunOS,$(HOST_OSNAME)),SunOS)
+    # detect if this is Nexenta platform
+    HOST_ALL_OSNAME := $(shell uname -a)
+    ifeq ($(findstring Nexenta,$(HOST_ALL_OSNAME)),Nexenta)
+      HOST_OSNAME := Nexenta
+    else # Up to version 5.5 SunOS-SunForte config is used, 5.6 and above use SunOS-SunStudio
+      COMPILER_NAME := $(shell CC -V 2>&1)
+      COMPILER_VERSION := $(subst .,,$(filter 5.%,$(COMPILER_NAME)))
+
+      ifeq (0, $(shell test $(COMPILER_VERSION) -gt 55; echo $$?))
+        CONFIG := SunOS-SunStudio
+      else
+        CONFIG := SunOS-SunForte
+      endif
+    endif
+  endif
+endif
+#
+# End Sun Platforms
+#
+
+#
+# If CONFIG is not set, use the OS name as configuration name
+#
+ifndef CONFIG
+CONFIG = $(HOST_OSNAME)
+endif
+
+#
+# Include System Specific Settings
+#
+include $(BASE)/build/config/$(CONFIG)
+
+#
+# Determine operating system
+#
+ifndef TARGET_OSNAME
+OSNAME   := $(HOST_OSNAME)
+else
+OSNAME   := $(TARGET_OSNAME)
+endif
+ifndef TARGET_OSARCH
+OSARCH   := $(subst /,-,$(shell uname -m | tr ' ' _))
+else
+OSARCH   := $(TARGET_OSARCH)
+endif
+HOSTNAME := $(shell hostname)
+
+#
+# Check if a 64bit build is requested
+#
+ifndef OSARCH_64BITS
+OSARCH_64BITS = 0
+endif
+
+ifeq ($(OSARCH_64BITS),1)
+OSARCH_POSTFIX = 64
+else
+OSARCH_POSTFIX =
+endif
+
+#
+# Detect distro
+#
+
+# Fedora, Redhat, Centos.
+REDHATISH = $(if $(wildcard /etc/redhat-release /etc/centos-release /etc/fedora-release),1)
+# Debian, Ubuntu
+DEBIANISH = $(if $(wildcard /etc/debian_version),1)
+
+#
+# Adjust suffix for 64-bit lib directory
+#
+ifneq ($(REDHATISH),)
+LIB64SUFFIX = $(if $(filter $(OSARCH),x86_64 sparc64 ppc64),64,)
+else ifneq ($(DEBIANISH),)
+LIB64SUFFIX = $(if $(filter $(OSARCH),x86_64 sparc64 ppc64),/x86_64-linux-gnu,)
+endif
+
+# Default static lib extension
+STATICLIBLINKEXT = .a
+
+#
+# Find out current component
+#
+COMPONENT := $(shell $(BASE)/build/script/projname "$(PROJECT_BASE)")
+
+#
+# Define standard directories
+#
+#SRCDIR   = src
+#INCDIR   = include
+LIBDIR   = lib/$(OSNAME)/$(OSARCH)
+BINDIR   = bin/$(OSNAME)/$(OSARCH)
+OBJDIR   = obj/$(OSNAME)/$(OSARCH)
+DEPDIR   = dep/$(OSNAME)/$(OSARCH)
+LIBPATH  = $(BASE)/$(LIBDIR)
+BINPATH  = $(BASE)/$(BINDIR)/$(COMPONENT)
+OBJPATH  = $(BASE)/$(OBJDIR)/$(COMPONENT)
+DEPPATH  = $(BASE)/$(DEPDIR)/$(COMPONENT)
+
+HOST_BINDIR    = bin/$(HOST_OSNAME)/$(HOST_OSARCH)
+TARGET_BINDIR  = $(BINDIR)
+HOST_BINPATH   = $(BUILD)/$(HOST_BINDIR)
+TARGET_BINPATH = $(BINPATH)
+HOST_LIBDIR    = lib/$(HOST_OSNAME)/$(HOST_OSARCH)
+TARGET_LIBDIR  = $(LIBDIR)
+HOST_LIBPATH   = $(BUILD)/$(HOST_LIBDIR)
+TARGET_LIBPATH = $(LIBPATH)
+ifdef PREFIX
+LIB_INSTALLDIR = $(PREFIX)/lib
+else
+LIB_INSTALLDIR = $(LIBPATH)
+endif
+
+ifeq ($(BASE),$(PROJECT_BASE))
+LIBRARY =
+else
+LIBRARY = -L$(BASE)/$(LIBDIR)
+endif
+
+ifndef LIBPREFIX
+LIBPREFIX = lib
+endif
+
+#
+# Build component list
+#
+COMPONENTS := $(shell cat $(BASE)/components)
+
+#
+# Read global library version number
+#
+LIBVERSION := $(shell cat $(BASE)/libversion)
+
+#
+# Determine link mode
+#
+ifndef LINKMODE
+LINKMODE = BOTH
+endif
+
+ifeq ($(LINKMODE),SHARED)
+DEFAULT_TARGET = all_shared
+endif
+ifeq ($(LINKMODE),STATIC)
+DEFAULT_TARGET = all_static
+endif
+ifeq ($(LINKMODE),BOTH)
+DEFAULT_TARGET = all_static all_shared
+endif
+
+#
+# Compose compiler flags
+#
+COMMONFLAGS = -DBUILD_HOST=$(HOSTNAME) $(FLAGS) 
+CFLAGS     += $(COMMONFLAGS) $(SYSFLAGS)
+CXXFLAGS   += $(COMMONFLAGS) $(SYSFLAGS) -std=c++11 
+LINKFLAGS  += $(COMMONFLAGS) $(SYSFLAGS)
+
+ifeq ($(OSARCH_64BITS),1)
+CFLAGS     += $(CFLAGS64)
+CXXFLAGS   += $(CXXFLAGS64)
+SHLIBFLAGS += $(SHLIBFLAGS64)
+DYLIBFLAGS += $(DYLIBFLAGS64)
+LINKFLAGS  += $(LINKFLAGS64)
+else
+CFLAGS     += $(CFLAGS32)
+CXXFLAGS   += $(CXXFLAGS32)
+SHLIBFLAGS += $(SHLIBFLAGS32)
+DYLIBFLAGS += $(DYLIBFLAGS32)
+LINKFLAGS  += $(LINKFLAGS32)
+endif
+
+#
+# Compose object file path
+#
+OBJPATH_RELEASE_STATIC = $(OBJPATH)/release_static$(OSARCH_POSTFIX)
+OBJPATH_DEBUG_STATIC   = $(OBJPATH)/debug_static$(OSARCH_POSTFIX)
+OBJPATH_RELEASE_SHARED = $(OBJPATH)/release_shared$(OSARCH_POSTFIX)
+OBJPATH_DEBUG_SHARED   = $(OBJPATH)/debug_shared$(OSARCH_POSTFIX)
+
+#
+# Build Include directory List
+#
+#INCLUDE = $(foreach p,$(ADD_INCLUDE),-I$(p)) -Iinclude $(foreach p,$(COMPONENTS),-I$(BASE)/$(p)/$(INCDIR))
+INCLUDE 	= $(foreach p,$(ADD_INCLUDE),-I$(p)) -I$(ROOT)/inc 
+INCLUDE 	+= -I$(POCOINC)/NetSSL_Win/include 
+INCLUDE 	+= -I$(POCOINC)/Net/include 
+INCLUDE 	+= -I$(POCOINC)/XML/include 
+INCLUDE 	+= -I$(POCOINC)/Util/include 
+INCLUDE 	+= -I$(POCOINC)/Foundation/include 
+INCLUDE 	+= -I$(POCOINC)/CppUnit/include
+
+#
+# Build Library Directory List
+#
+LIBRARY := $(foreach p,$(ADD_LIBRARY),-L$(p)) -L$(LIBPATH) $(LIBRARY)
+
+#
+# Strip Command definition
+#
+ifeq ($(strip $(STRIP)),)
+STRIPCMD = 
+else
+STRIPCMD = $(STRIP) $@$(BINEXT)
+endif
+
+#
+# Make CC, CXX and LINK environment vars
+#
+export CC
+export CXX
+export LINK
+

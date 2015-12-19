@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ISO-8583-DTE-1987" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ISO-8583-DTE-1987" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ISO-8583-DTE-1987" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c++11" />
+			<Add option="-Wall" />
+			<Add option="-fPIC" />
+			<Add option="-fexceptions" />
+			<Add option="-Wno-sign-compare" />
+			<Add option="-Wno-non-template-friend" />
+			<Add option="-Wno-cpp" />
+			<Add option="-fmessage-length=0" />
+			<Add option="-fpermissive" />
+			<Add option="-DVRM_ISO_8583=1987" />
+			<Add directory="../../inc" />
+		</Compiler>
+		<Unit filename="../../code/ISO-8583/DTE/AccountIdentification1.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/AccountIdentification2.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/AcquirerReferenceNumber.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/AcquiringInstitutionCountryCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/AcquiringInstitutionIdentificationCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/AdditionalAmounts.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/AdditionalDataISO.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/AdditionalDataNational.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/AdditionalDataPrivate.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/AdditionalResponseData.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/AmountSettlementFee.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/AmountSettlementProcessingFee.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/AmountsFees.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/AmountsOriginal.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/AmountsOriginalFees.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/ApprovalCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/AuthorizationIdentificationResponse.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/AuthorizationIdentificationResponseLength.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/AuthorizationLifeCycleCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/AuthorizingAgentInstitutionIdentificationCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/BinaryTLV.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/BinaryTLVs.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/Bitmap.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/CardAcceptorIdentificationCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/CardAcceptorNameOrlocation.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/CardAcceptorTerminalIdentification.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/CardHolderBillingAmount.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/CardHolderBillingConversionRate.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/CardHolderBillingCurrencyCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/CardHolderBillingFeeAmount.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/CardIssuerReferenceData.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/CardSequenceNumber.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/Constructed.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/ConversionRateReconciliation.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/DataElement.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/DataRecord.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/DateAction.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/DateAndTimeLocalTransaction.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/DateCapture.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/DateConversion.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/DateEffective.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/DateExpiration.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/DateReconciliation.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/DateSettlement.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/ElectronicCommerceData.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/Exception.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/ExtendedPaymentData.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/Field.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/FileName.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/FileTransferControlData.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/FileTransferDescriptionData.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/FileTransferMessageControl.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/ForwardingInstitutionCountryCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/ForwardingInstitutionIdentificationCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/FunctionCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/ICCSystemRelatedData.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/ISO-8583-DTE.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/ISO-8583-DTE.h" />
+		<Unit filename="../../code/ISO-8583/DTE/KeyManagementData.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/MACField.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/MerchantCategoryCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/MerchantType.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/MessageErroIndicator.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/MessageReasonCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/NationalData.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/NetworkInternationalIdentifier.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/OriginalDataElements.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/PINData.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/POSCapability.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/POSDataCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/Payee.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/PointOfServiceConditionCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/PointOfServiceEntryMode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/PointOfServicePINCaptureCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/PrimaryAccountNumber.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/PrimaryAccountNumberCountryCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/PrimaryAccountNumberExtended.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/ProcessingCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/ReceivingInstitutionIdentificationCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/ReconciliationDataPrimary.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/ReconciliationDataSecondary.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/ReconciliationFeeAmountsCredit.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/ResponseCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/RetrievalReferenceNumber.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/SecurityRelatedControlInformation.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/ServiceCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/ServiceRestrictionCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/SettlementAmount.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/SettlementConversionRate.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/SettlementCurrencyCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/SettlementFeeAmount.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/SettlementInstitutionIdentificationCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/SettlementProcessingFeeAmount.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/SystemsTraceAuditNumber.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/TLV.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/Tag.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/Track1Data.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/Track2Data.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/Track3Data.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/TransactionAmount.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/TransactionCurrencyCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/TransactionDestinationInstitutionIdentificationCode.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/TransactionFeeAmount.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/TransactionLocalDate.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/TransactionLocalTime.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/TransactionProcessingFeeAmount.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/TransactionProcessingFeeAmout.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/TransactionSpecificData.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/TransmissionDateAndTime.cpp" />
+		<Unit filename="../../code/ISO-8583/DTE/VerificationData.cpp" />
+		<Unit filename="../../inc/ISO-8583/DTE/VerificationData.h" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

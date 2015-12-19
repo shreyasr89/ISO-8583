@@ -1,0 +1,79 @@
+1/ Target platforms and compiler
+ISO-8583 is targeted to run on major Linuces using gcc 4.8 and Windows using VS 2013.
+
+2/ Requirements
+ISO-8583 is using the Poco library version 1.6.2. Thus a pre requirement is to
+get Poco working on your platform, either by installing a pre packaged build or building your self
+from the git repository: https://github.com/pocoproject/poco.git
+
+
+3/ Building ISO-8583 on Windows with VS2013 or VS2013 Express edition.
+
+a) Building
+  Install or build Poco 1.6.2
+  Define a global variable POCO pointing at the Poco master directory
+  Open the IOS-8583/ISO-8583.sln
+  Build Debug and Release version
+
+b) Running the demo with the debug version.
+  Open a DOS windows at ISO-8583/cpp/vc2013/Debug
+  Add the directory $(POCO)/bin to PATH
+  If Poco was build from source
+     add the directory ISO-8583/cpp/vc2013/Debug to PATH
+  Run the server with this command: start ISO-8583-SRV-1987d.exe
+  Run the client with this command: ISO-8583-CLI-1987d.exe
+
+  The client should displays 
+>>> connect
+>>> class ISO_8583::MSG::ISO8583AuthorizationRequest
+<<< class ISO_8583::MSG::ISO8583AuthorizationRequestResponse
+>>> class ISO_8583::MSG::ISO8583AuthorizationRequest
+<<< class ISO_8583::MSG::ISO8583AuthorizationRequestResponse
+>>> class ISO_8583::MSG::ISO8583AuthorizationRequest
+<<< class ISO_8583::MSG::ISO8583AuthorizationRequestResponse
+>>> class ISO_8583::MSG::ISO8583AuthorizationRequest
+<<< class ISO_8583::MSG::ISO8583AuthorizationRequestResponse
+>>> disconnect
+
+
+4/ Building on Linuces
+
+a) Building and unit testing
+  Install or build Poco 1.6.2
+  Define a global variable POCO pointing at the Poco master directory
+  Open a terminal at ISO-8583/cpp
+  Build by launching make-C make;make -C make tests;
+  run make -C make runtests 
+  
+ b) running the demo
+  Open a new terminal
+  Change directory to ISO-8583/cpp
+  launch the server: bin64/ISO-8583-SRV-1987d
+  
+  Open a terminal
+  Change directory to ISO-8583/cpp
+  launch the client: bin64/ISO-8583-CLI-1987d
+  
+  The client should display
+  >>> connect
+>>> N8ISO_85833MSG27ISO8583AuthorizationRequestE
+<<< N8ISO_85833MSG35ISO8583AuthorizationRequestResponseE
+>>> N8ISO_85833MSG27ISO8583AuthorizationRequestE
+<<< N8ISO_85833MSG35ISO8583AuthorizationRequestResponseE
+>>> N8ISO_85833MSG27ISO8583AuthorizationRequestE
+<<< N8ISO_85833MSG35ISO8583AuthorizationRequestResponseE
+>>> N8ISO_85833MSG27ISO8583AuthorizationRequestE
+<<< N8ISO_85833MSG35ISO8583AuthorizationRequestResponseE
+>>> disconnect
+  
+   
+5/ Specialization of the ISO-8583 messages
+All ISO-8583 messages have a standard minimal implementation located in the ISO-8583/MSG library. 
+
+One can specialize each of those messages by building a specilized USER library taking the ISO-8583/DFT library
+as a staring point. Have a look at ISO-8583/DFT source code. 
+
+You can configure the client ISO-8583-CLI-1987 and the server ISO-8583-1987 to use your own
+library by changing the library parameter in ISO-8583-CLI-1987.properties and 
+ISO-8583-SRV-1987.properties
+

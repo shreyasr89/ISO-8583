@@ -1,0 +1,776 @@
+# depslib dependency file v1.0
+1442770184 source:/home/francis/git/ISO-8583/cpp/test/ISO-8583/MSG/AuthorizationRequestTest.cpp
+	<iostream>
+	<sstream>
+	<string>
+	<stdexcept>
+	<typeinfo>
+	"CppUnit/TestCaller.h"
+	"CppUnit/TestSuite.h"
+	"ISO-8583/MSG/ISO-8583-MSG.h"
+	"ISO-8583/DTE/Bitmap.h"
+	"ISO-8583/DTE/AccountIdentification1.h"
+	"ISO-8583/DTE/AccountIdentification2.h"
+	"ISO-8583/DTE/AcquiringInstitutionIdentificationCode.h"
+	"ISO-8583/DTE/AdditionalDataNational.h"
+	"ISO-8583/DTE/AdditionalDataPrivate.h"
+	"ISO-8583/DTE/AdditionalResponseData.h"
+	"ISO-8583/DTE/CardHolderBillingAmount.h"
+	"ISO-8583/DTE/CardHolderBillingFeeAmount.h"
+	"ISO-8583/DTE/TransactionAmount.h"
+	"ISO-8583/DTE/AdditionalAmounts.h"
+	"ISO-8583/DTE/CardAcceptorIdentificationCode.h"
+	"ISO-8583/DTE/CardAcceptorNameOrlocation.h"
+	"ISO-8583/DTE/CardAcceptorTerminalIdentification.h"
+	"ISO-8583/DTE/CardIssuerReferenceData.h"
+	"ISO-8583/DTE/CardSequenceNumber.h"
+	"ISO-8583/DTE/CardHolderBillingConversionRate.h"
+	"ISO-8583/DTE/AcquiringInstitutionCountryCode.h"
+	"ISO-8583/DTE/PrimaryAccountNumberCountryCode.h"
+	"ISO-8583/DTE/DateCapture.h"
+	"ISO-8583/DTE/DateConversion.h"
+	"ISO-8583/DTE/DateExpiration.h"
+	"ISO-8583/DTE/DateSettlement.h"
+	"ISO-8583/DTE/FileName.h"
+	"ISO-8583/DTE/ForwardingInstitutionCountryCode.h"
+	"ISO-8583/DTE/ForwardingInstitutionIdentificationCode.h"
+	"ISO-8583/DTE/MACField.h"
+	"ISO-8583/DTE/OriginalDataElements.h"
+	"ISO-8583/DTE/PINData.h"
+	"ISO-8583/DTE/Payee.h"
+	"ISO-8583/DTE/PrimaryAccountNumber.h"
+	"ISO-8583/DTE/ProcessingCode.h"
+	"ISO-8583/DTE/ReceivingInstitutionIdentificationCode.h"
+	"ISO-8583/DTE/RetrievalReferenceNumber.h"
+	"ISO-8583/DTE/SecurityRelatedControlInformation.h"
+	"ISO-8583/DTE/SettlementInstitutionIdentificationCode.h"
+	"ISO-8583/DTE/SystemsTraceAuditNumber.h"
+	"ISO-8583/DTE/Track1Data.h"
+	"ISO-8583/DTE/Track2Data.h"
+	"ISO-8583/DTE/Track3Data.h"
+	"ISO-8583/DTE/NationalData.h"
+	"ISO-8583/DTE/TransmissionDateAndTime.h"
+	"ISO-8583/DTE/TransactionLocalDate.h"
+	"ISO-8583/DTE/TransactionLocalTime.h"
+	"ISO-8583/DTE/MerchantType.h"
+	"ISO-8583/DTE/ResponseCode.h"
+	"ISO-8583/DTE/ServiceRestrictionCode.h"
+	"ISO-8583/DTE/TransactionCurrencyCode.h"
+	"ISO-8583/DTE/PointOfServiceEntryMode.h"
+	"ISO-8583/DTE/NetworkInternationalIdentifier.h"
+	"ISO-8583/DTE/PointOfServiceConditionCode.h"
+	"ISO-8583/DTE/PointOfServicePINCaptureCode.h"
+	"ISO-8583/DTE/AuthorizationIdentificationResponse.h"
+	"ISO-8583/DTE/AuthorizationIdentificationResponseLength.h"
+	"ISO-8583/DTE/TransactionFeeAmount.h"
+	"ISO-8583/DTE/SettlementFeeAmount.h"
+	"ISO-8583/DTE/TransactionProcessingFeeAmount.h"
+	"ISO-8583/DTE/SettlementProcessingFeeAmount.h"
+	"ISO-8583/DTE/SettlementCurrencyCode.h"
+	"ISO-8583/DTE/CardHolderBillingCurrencyCode.h"
+	"ISO-8583/DTE/PointOfServiceEntryMode.h"
+	"ISO-8583/DTE/2003/NetReconciliationAmount.h"
+	"ISO-8583/DTE/2003/AuthorizationLifeCycleCode.h"
+	"ISO-8583/DTE/2003/AuthorizingAgentInstitutionIdentificationCode.h"
+	"ISO-8583/DTE/2003/DataRecord.h"
+	"ISO-8583/DTE/2003/DateAction.h"
+	"ISO-8583/DTE/2003/DateEffective.h"
+	"ISO-8583/DTE/2003/ElectronicCommerceData.h"
+	"ISO-8583/DTE/2003/ExtendedPaymentData.h"
+	"ISO-8583/DTE/2003/FileTransferControlData.h"
+	"ISO-8583/DTE/2003/FileTransferDescriptionData.h"
+	"ISO-8583/DTE/2003/FileTransferMessageControl.h"
+	"ISO-8583/DTE/2003/ICCSystemRelatedData.h"
+	"ISO-8583/DTE/2003/KeyManagementData.h"
+	"ISO-8583/DTE/2003/ReconciliationDataPrimary.h"
+	"ISO-8583/DTE/2003/ReconciliationDataSecondary.h"
+	"ISO-8583/DTE/2003/ReconciliationFeeAmountsCredit.h"
+	"ISO-8583/DTE/2003/ReconciliationFeeAmountsDebit.h"
+	"ISO-8583/DTE/2003/TransactionDestinationInstitutionIdentificationCode.h"
+	"ISO-8583/DTE/2003/TransactionLifeCycleIdentificationData.h"
+	"ISO-8583/DTE/2003/TransactionOriginatorInstitutionIdentificationCode.h"
+	"ISO-8583/DTE/2003/TransactionSpecificData.h"
+	"ISO-8583/DTE/2003/VerificationData.h"
+	"ISO-8583/DTE/2003/ActionCode.h"
+	"ISO-8583/DTE/2003/AcquirerReferenceNumber.h"
+	"ISO-8583/DTE/2003/AmountReconciliation.h"
+	"ISO-8583/DTE/2003/AmountsFees.h"
+	"ISO-8583/DTE/2003/AmountsOriginal.h"
+	"ISO-8583/DTE/2003/ApprovalCode.h"
+	"ISO-8583/DTE/2003/ConversionRateReconciliation.h"
+	"ISO-8583/DTE/2003/DateAndTimeLocalTransaction.h"
+	"ISO-8583/DTE/2003/FunctionCode.h"
+	"ISO-8583/DTE/2003/DateReconciliation.h"
+	"ISO-8583/DTE/2003/MerchantCategoryCode.h"
+	"ISO-8583/DTE/2003/POSDataCode.h"
+	"ISO-8583/DTE/2003/MessageReasonCode.h"
+	"ISO-8583/DTE/2003/POSCapability.h"
+	"ISO-8583/DTE/2003/ReconciliationIndicator.h"
+	"ISO-8583/DTE/2003/ServiceCode.h"
+	"ISO-8583/DTE/2003/MessageErroIndicator.h"
+	"ISO-8583/DTT/Bitmaps.h"
+	"ISO-8583/MSG/AuthorizationRequest.h"
+	"ISO-8583/DFT/DefaultAuthorizationRequest.h"
+	"ISO-8583/DFT/DefaultAuthorizationRequestResponse.h"
+	"AuthorizationRequestTest.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/MSG/ISO-8583-MSG.h
+	"ISO-8583/DTE/ISO-8583-DTE.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/ISO-8583-DTE.h
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/ISO-8583-DTT.h
+	<cstddef>
+	<cstdint>
+	<string>
+	"Poco/Platform.h"
+	"Poco/Platform_WIN32.h"
+	"Poco/Platform_VMS.h"
+	"Poco/Platform_VX.h"
+	"Poco/Platform_POSIX.h"
+	"ISO-8583/DTT/endian.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/endian.h
+	<stdint.h>
+	<sys/endian.h>
+	<machine/endian.h>
+	<endian.h>
+	<byteswap.h>
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/Bitmap.h
+	"ISO-8583/DTE/ISO-8583-DTE.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/AccountIdentification1.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+	"ISO-8583/DTT/LLAlphaNumericSpace.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/DataElement.h
+	<string>
+	"ISO-8583/DTE/ISO-8583-DTE.h"
+	"ISO-8583/DTT/BinaryInputOutputStream.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/BinaryInputOutputStream.h
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/BinaryInputStream.h
+	<ios>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/Platform.h"
+	"ISO-8583/DTT/Buffer.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Platform.h
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Buffer.h
+	<stdexcept>
+	<string>
+	"ISO-8583-DTT.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/BinaryOutputStream.h
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/Buffer.h"
+	"ISO-8583/DTT/Platform.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/AlphaNumeric.h
+	<iostream>
+	<string>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/Bytes.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Bytes.h
+	<cstring>
+	<string>
+	<algorithm>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/Exception.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Exception.h
+	<stdexcept>
+	<string>
+	"ISO-8583-DTT.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLAlphaNumericSpace.h
+	<string>
+	"ISO-8583/DTT/LL.h"
+	"ISO-8583/DTT/AlphaNumericSpace.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LL.h
+	<iostream>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/AlphaNumericSpace.h
+	<iostream>
+	<string>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/Bytes.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/AccountIdentification2.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+	"ISO-8583/DTT/LLAlphaNumericSpace.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/AcquiringInstitutionIdentificationCode.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/LLNumeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLNumeric.h
+	"ISO-8583/DTT/LL.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Numeric.h
+	<iostream>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/Exception.h"
+	"ISO-8583/DTT/Bytes.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/AdditionalDataNational.h
+	<string>
+	<vector>
+	"ISO-8583/DTT/Bitmaps.h"
+	"ISO-8583/DTE/Field.h"
+	"ISO-8583/DTE/Constructed.h"
+	"ISO-8583/DTT/LLLAlphaNumericSpecial.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+	"ISO-8583/DTT/AlphaNumericSpace.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/LLBytes.h"
+	"ISO-8583/DTT/LLLBytes.h"
+	"ISO-8583/DTE/TLV.h"
+	"ISO-8583/DTE/DataElement.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Bitmaps.h
+	<iostream>
+	<bitset>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/Field.h
+	<cassert>
+	"ISO-8583/DTE/ISO-8583-DTE.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/Constructed.h
+	"ISO-8583/DTE/ISO-8583-DTE.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLLAlphaNumericSpecial.h
+	<iostream>
+	<string>
+	"ISO-8583/DTT/LLL.h"
+	"ISO-8583/DTT/AlphaNumericSpecial.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLL.h
+	<iostream>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/AlphaNumericSpecial.h
+	<iostream>
+	<string>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/Bytes.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLBytes.h
+	<iostream>
+	<string>
+	"ISO-8583/DTT/LL.h"
+	"ISO-8583/DTT/Bytes.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLLBytes.h
+	<iostream>
+	<string>
+	"ISO-8583/DTT/LLL.h"
+	"ISO-8583/DTT/Bytes.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/TLV.h
+	<cassert>
+	<iostream>
+	"ISO-8583-DTE.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Zoned.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Zoned.h
+	<iostream>
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/Exception.h"
+	"ISO-8583/DTT/Bytes.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/AdditionalDataPrivate.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/LLAlphaNumericSpecial.h"
+	"ISO-8583/DTT/LLLAlphaNumericSpecial.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLAlphaNumericSpecial.h
+	<iostream>
+	<string>
+	"ISO-8583/DTT/LL.h"
+	"ISO-8583/DTT/AlphaNumericSpecial.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/AdditionalResponseData.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/LLAlphaNumericSpecial.h"
+	"ISO-8583/DTT/LLAlphaNumericSpecial.h"
+	"ISO-8583/DTT/LLAlphaNumericSpecial.h"
+	"ISO-8583/DTT/LLLLAlphaNumericSpecial.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLLLAlphaNumericSpecial.h
+	"ISO-8583/DTT/LLLL.h"
+	"ISO-8583/DTT/AlphaNumericSpecial.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLLL.h
+	"ISO-8583-DTT.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/CardHolderBillingAmount.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/CardHolderBillingFeeAmount.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/TransactionAmount.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/AdditionalAmounts.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/LLLAlphaNumeric.h"
+	"ISO-8583/DTT/LLLAlphaNumericSpecial.h"
+	"ISO-8583/DTT/LLLAlphaNumericSpecial.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/LLLAlphaNumeric.h
+	"ISO-8583/DTT/LLL.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/CardAcceptorIdentificationCode.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/AlphaNumericSpecial.h"
+	"ISO-8583/DTT/AlphaNumericSpecial.h"
+	"ISO-8583/DTT/LLAlphaNumericSpecial.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/CardAcceptorNameOrlocation.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/AlphaNumericSpecial.h"
+	"ISO-8583/DTT/AlphaNumericSpecial.h"
+	"ISO-8583/DTE/LLLLAlphaNumericSpecial.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/CardAcceptorTerminalIdentification.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/AlphaNumericSpecial.h"
+	"ISO-8583/DTT/AlphaNumericSpecial.h"
+	"ISO-8583/DTT/AlphaNumericSpecial.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/CardIssuerReferenceData.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+	"ISO-8583/DTT/LLAlphaNumericSpecial.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/CardSequenceNumber.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/CardHolderBillingConversionRate.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/AcquiringInstitutionCountryCode.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/PrimaryAccountNumberCountryCode.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/DateCapture.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/DateConversion.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/DateExpiration.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Year.h"
+	"ISO-8583/DTT/Month.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Year.h
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Month.h
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/DateSettlement.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/FileName.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+	"ISO-8583/DTT/AlphaNumericSpace.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/ForwardingInstitutionCountryCode.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/ForwardingInstitutionIdentificationCode.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/LLNumeric.h"
+	"ISO-8583/DTT/LLNumeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/MACField.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Bytes.h"
+	"ISO-8583/DTT/Bytes.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/OriginalDataElements.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/LLNumeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/PINData.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Bytes.h"
+	"ISO-8583/DTT/Bytes.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/Payee.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+	"ISO-8583/DTT/AlphaNumericSpace.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/PrimaryAccountNumber.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/LLNumeric.h"
+	"ISO-8583/DTT/LLNumeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/ProcessingCode.h
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+	"ISO-8583/DTE/DataElement.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/ReceivingInstitutionIdentificationCode.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+	"ISO-8583/DTT/AlphaNumericSpace.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/RetrievalReferenceNumber.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+	"ISO-8583/DTT/AlphaNumericSpace.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/SecurityRelatedControlInformation.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/LLBytes.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/SettlementInstitutionIdentificationCode.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+	"ISO-8583/DTT/AlphaNumericSpace.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/SystemsTraceAuditNumber.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/Track1Data.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/AlphaNumericSpecial.h"
+	"ISO-8583/DTT/AlphaNumericSpecial.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/Track2Data.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/LLBytes.h"
+	"ISO-8583/DTT/LLBytes.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/Track3Data.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/LLLBytes.h"
+	"ISO-8583/DTT/LLLBytes.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/NationalData.h
+	<vector>
+	"ISO-8583/DTE/Field.h"
+	"ISO-8583/DTT/Bitmaps.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+	"ISO-8583/DTT/AlphaNumericSpace.h"
+	"ISO-8583/DTT/Bytes.h"
+	"ISO-8583/DTT/LLBytes.h"
+	"ISO-8583/DTT/LLLBytes.h"
+	"ISO-8583/DTE/TLV.h"
+	"ISO-8583/DTE/BinaryTLV.h"
+	"ISO-8583/DTT/LLLAlphaNumericSpecial.h"
+	"ISO-8583/DTE/DataElement.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/BinaryTLV.h
+	<cassert>
+	<iostream>
+	"ISO-8583/DTE/ISO-8583-DTE.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/TransmissionDateAndTime.h
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTE/DataElement.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/TransactionLocalDate.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Month.h"
+	"ISO-8583/DTT/Day.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Day.h
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/TransactionLocalTime.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Hour.h"
+	"ISO-8583/DTT/Minute.h"
+	"ISO-8583/DTT/Second.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Hour.h
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Minute.h
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/Second.h
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/MerchantType.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/ResponseCode.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/ServiceRestrictionCode.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/TransactionCurrencyCode.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/PointOfServiceEntryMode.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/NetworkInternationalIdentifier.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/PointOfServiceConditionCode.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/PointOfServicePINCaptureCode.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/AuthorizationIdentificationResponse.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/AuthorizationIdentificationResponseLength.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/TransactionFeeAmount.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/SignedNumeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTT/SignedNumeric.h
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/SettlementFeeAmount.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/SignedNumeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/TransactionProcessingFeeAmount.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+	"ISO-8583/DTT/LLAlphaNumericSpace.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/SettlementProcessingFeeAmount.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/SignedNumeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/SettlementCurrencyCode.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/AlphaNumeric.h"
+	"ISO-8583/DTT/LLAlphaNumericSpace.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DTE/CardHolderBillingCurrencyCode.h
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/DTT/Numeric.h"
+	"ISO-8583/DTT/Numeric.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/MSG/AuthorizationRequest.h
+	<iostream>
+	"ISO-8583/MSG/ISO-8583-MSG.h"
+	"ISO-8583/DTT/Bitmaps.h"
+	"ISO-8583/MSG/Request.h"
+	"ISO-8583/MSG/Message.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/MSG/Request.h
+	<iostream>
+	"ISO-8583/MSG/ISO-8583-MSG.h"
+	"ISO-8583/MSG/Exception.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/MSG/Exception.h
+	<stdexcept>
+	"ISO-8583/MSG/ISO-8583-MSG.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/MSG/Message.h
+	<vector>
+	<iostream>
+	<sstream>
+	"ISO-8583/MSG/ISO-8583-MSG.h"
+	"ISO-8583/DTT/Bitmaps.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+	"ISO-8583/DTE/Bitmap.h"
+	"ISO-8583/DTE/DataElement.h"
+	"ISO-8583/MSG/MTI.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/MSG/MTI.h
+	<iostream>
+	"ISO-8583/DTT/BinaryInputOutputStream.h"
+	"ISO-8583/MSG/ISO-8583-MSG.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DFT/DefaultAuthorizationRequest.h
+	"ISO-8583/DFT/ISO-8583-DFT.h"
+	"ISO-8583/MSG/AuthorizationRequest.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DFT/ISO-8583-DFT.h
+	"ISO-8583/DTT/ISO-8583-DTT.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/DFT/DefaultAuthorizationRequestResponse.h
+	"ISO-8583/DFT/ISO-8583-DFT.h"
+	"ISO-8583/MSG/AuthorizationRequestResponse.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/MSG/AuthorizationRequestResponse.h
+	<iostream>
+	"ISO-8583/MSG/ISO-8583-MSG.h"
+	"ISO-8583/DTT/Bitmaps.h"
+	"ISO-8583/MSG/Message.h"
+	"ISO-8583/MSG/RequestResponse.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/MSG/RequestResponse.h
+	"ISO-8583/MSG/ISO-8583-MSG.h"
+	"ISO-8583/MSG/Exception.h"
+	"ISO-8583/DTT/BinaryInputOutputStream.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/test/ISO-8583/MSG/AuthorizationRequestTest.h
+	"Poco/Foundation.h"
+	"CppUnit/TestCase.h"
+	<string>
+	<bitset>
+	"ISO-8583/MSG/Factory.h"
+	"ISO-8583/DTE/Bitmap.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/MSG/Factory.h
+	"Poco/ClassLoader.h"
+	"Poco/Manifest.h"
+	"ISO-8583/MSG/ISO-8583-MSG.h"
+	"ISO-8583/MSG/MTI.h"
+	"ISO-8583/MSG/Request.h"
+	"ISO-8583/MSG/Advice.h"
+	"ISO-8583/MSG/Notification.h"
+	"ISO-8583/MSG/Instruction.h"
+	"ISO-8583/MSG/RequestResponse.h"
+	"ISO-8583/MSG/AdviceResponse.h"
+	"ISO-8583/MSG/NotificationAcknowledge.h"
+	"ISO-8583/MSG/InstructionAcknowledge.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/MSG/Advice.h
+	"ISO-8583/MSG/ISO-8583-MSG.h"
+	"ISO-8583/MSG/Exception.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/MSG/Notification.h
+	"ISO-8583/MSG/ISO-8583-MSG.h"
+	"ISO-8583/MSG/Exception.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/MSG/Instruction.h
+	"ISO-8583/MSG/ISO-8583-MSG.h"
+	"ISO-8583/MSG/Exception.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/MSG/AdviceResponse.h
+	"ISO-8583/MSG/ISO-8583-MSG.h"
+	"ISO-8583/MSG/Exception.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/MSG/NotificationAcknowledge.h
+	"ISO-8583/MSG/ISO-8583-MSG.h"
+	"ISO-8583/MSG/Exception.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442767406 /home/francis/git/ISO-8583/cpp/inc/ISO-8583/MSG/InstructionAcknowledge.h
+	"ISO-8583/MSG/ISO-8583-MSG.h"
+	"ISO-8583/MSG/Exception.h"
+	"ISO-8583/DTT/BinaryInputStream.h"
+	"ISO-8583/DTT/BinaryOutputStream.h"
+
+1442767406 source:/home/francis/git/ISO-8583/cpp/test/ISO-8583/MSG/Driver.cpp
+	"CppUnit/TestRunner.h"
+	"ISO-8583-MSG-TestSuite.h"
+
+1442764775 /home/francis/git/ISO-8583/cpp/test/ISO-8583/MSG/ISO-8583-MSG-TestSuite.h
+	"CppUnit/TestSuite.h"
+
+1442767406 source:/home/francis/git/ISO-8583/cpp/test/ISO-8583/MSG/ISO-8583-MSG-TestSuite.cpp
+	"ISO-8583-MSG-TestSuite.h"
+	"AuthorizationRequestTest.h"
+

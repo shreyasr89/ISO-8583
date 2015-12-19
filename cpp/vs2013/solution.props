@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" >
+  <!--
+    <Poco>C:\Program Files (x86)\Poco\1.6.1</Poco>
+  -->
+    <Poco>$(POCO)</Poco>
+  </PropertyGroup>
+  <PropertyGroup Label="PropertySheets">
+<!--
+    <IncludePath>$(SolutionDir)/../inc;$(Poco)\NetSSL_Win\include;$(Poco)\Net\include;$(Poco)\Util\include;$(Poco)\XML\include;$(Poco)\Foundation\include;$(Poco)\CppUnit\include;$(IncludePath)</IncludePath>
+-->
+    <IncludePath>$(SolutionDir)/../inc;$(Poco)\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)/$(Configuration);$(Poco)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup />
+  <ItemGroup />
+</Project>
+<!--
+  <Import Project="$(SolutionDir)\solution.props" Condition="exists('$(SolutionDir)\solution.props')" Label="solutionPlatform" />
+-->

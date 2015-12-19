@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ISO-8583-DTT" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ISO-8583-DTT" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-fPIC" />
+					<Add option="-Wno-sign-compare" />
+					<Add option="-Wno-non-template-friend" />
+					<Add option="-Wno-cpp" />
+					<Add option="-fmessage-length=0" />
+					<Add option="-fpermissive" />
+					<Add directory="../../inc" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ISO-8583-DTT" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-std=c++11" />
+			<Add option="-Wall" />
+			<Add option="-fPIC" />
+			<Add option="-fexceptions" />
+			<Add option="-Wno-sign-compare" />
+			<Add option="-Wno-non-template-friend" />
+			<Add option="-Wno-cpp" />
+			<Add option="-fmessage-length=0" />
+			<Add option="-fpermissive" />
+			<Add option="-DVRM_ISO_8583=1987" />
+		</Compiler>
+		<Unit filename="../../code/ISO-8583/DTT/AlphaNumeric.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/AlphaNumericBinary.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/AlphaNumericSpace.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/AlphaNumericSpecial.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/Alphabetic.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/BinaryInputOutputStream.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/BinaryInputStream.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/BinaryOutputStream.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/Bitmaps.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/Buffer.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/Bytes.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/Century.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/Day.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/Exception.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/Hour.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/ISO-8583-DTT.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/LL.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/LLAlphaNumeric.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/LLAlphaNumericSpace.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/LLAlphaNumericSpecial.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/LLAlphabetic.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/LLBytes.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/LLL.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/LLLAlphaNumeric.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/LLLAlphaNumericSpecial.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/LLLBytes.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/LLLL.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/LLLLAlphaNumericSpecial.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/LLLLBytes.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/LLNumeric.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/LLNumericSpecial.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/Millisecond.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/Minute.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/Month.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/Numeric.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/NumericSpecial.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/Range.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/Second.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/SignedNumeric.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/Year.cpp" />
+		<Unit filename="../../code/ISO-8583/DTT/Zoned.cpp" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

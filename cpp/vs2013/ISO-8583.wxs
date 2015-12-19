@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Product Id="3CF64276-70A3-41FF-BDC7-498D801934D7" Name="ISO-8583" Language="1033" Version="0.0.1" Manufacturer="Kampbell" UpgradeCode="27C9694A-4E77-436A-A600-BAA5F2C800D8" Codepage="1252">
+        <Package Description="The ISO-8583 financial inter banking protocol installer" Comments="ISO-8583" InstallerVersion="200" Compressed="yes" Id="C767C79F-CAE2-4694-837D-48720BD8D44B" Keywords="Installer" SummaryCodepage="1252" Languages="1033" Platform="x86" InstallPrivileges="limited" InstallScope="perMachine" />
+        <Media Id="1" Cabinet="simple.cab" EmbedCab="yes" />
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <Directory Id="ProgramFilesFolder" Name="PFiles">
+                <Directory Id="INSTALLDIR" Name="ISO-8583">
+                    <Directory Id="STD1987" Name="1987">
+                        <Directory Id="bin" Name="bin">
+                            <Component Id="Client" Guid="C530CE43-C65F-4FD5-A11C-D0BA16065356">
+                                <File Id="ISO_8583_CLI_1987D.EXE" Name="ISO-8583-CLI-1987d.exe" Source="Debug\ISO-8583-CLI-1987d.exe" />
+                                <File Id="ISO_8583_CLI_1987D.PDB" Name="ISO-8583-CLI-1987d.pdb" Source="Debug\ISO-8583-CLI-1987d.pdb" />
+                            </Component>
+                            <Component Id="Server" Guid="83789C23-6E79-4AF8-9BA5-A780A143233E">
+                                <File Id="ISO_8583_SRV_1987D.EXE" Name="ISO-8583-SRV-1987d.exe" Source="Debug\ISO-8583-SRV-1987d.exe" />
+                                <File Id="ISO_8583_SRV_1987D.PDB" Name="ISO-8583-SRV-1987d.pdb" Source="Debug\ISO-8583-SRV-1987d.pdb" />
+                            </Component>
+                            <Component Id="DTT.dll" Guid="A51FEED7-E9B6-4CF9-89FD-4E7A0DB5D3E8">
+                                <File Id="ISO_8583_DTTD.DLL" Name="ISO-8583-DTTd.dll" Source="Debug\ISO-8583-DTTd.dll" />
+                                <File Id="ISO_8583_DTTD.PDB" Name="ISO-8583-DTTd.pdb" Source="Debug\ISO-8583-DTTd.pdb" />
+                            </Component>
+                            <Component Id="DTE.dll" Guid="6DEBCC73-24B5-47ED-A150-3D1ACEEF78DB">
+                                <File Id="ISO_8583_DTE_1987D.DLL" Name="ISO-8583-DTE-1987d.dll" Source="Debug\ISO-8583-DTE-1987d.dll" />
+                                <File Id="ISO_8583_DTE_1987D.PDB" Name="ISO-8583-DTE-1987d.pdb" Source="Debug\ISO-8583-DTE-1987d.pdb" />
+                            </Component>
+                        </Directory>
+                        <Directory Id="lib" Name="lib">
+                            <Component Id="LIB.DTT" Guid="6B5EEDCE-2E57-4B1D-B1F7-CAFD2AC9E35E">
+                                <File Id="ISO_8583_DTTD.LIB" Name="ISO-8583-DTTd.lib" Source="Debug\ISO-8583-DTTd.lib" />
+                            </Component>
+                            <Component Id="LIB.DTE.1987" Guid="F8460361-E2FB-45D0-BE6C-F9370C9BA85B">
+                                <File Id="ISO_8583_DTE_1987D.LIB" Name="ISO-8583-DTE-1987d.lib" Source="Debug\ISO-8583-DTE-1987d.lib" />
+                            </Component>
+                        </Directory>
+                        <Component Id="Client.properties" Guid="B06C7D88-77F9-49D9-828E-D45D4622684A">
+                            <File Id="ISO_8583_CLI_1987.PROPERTIES" Name="ISO-8583-CLI-1987.properties" Source="..\ISO-8583-CLI-1987.properties" />
+                        </Component>
+                        <Component Id="Server.properties" Guid="2E77D923-7374-467C-8C24-1CA4FEA3F1F1">
+                            <File Id="ISO_8583_SRV_1987.PROPERTIES" Name="ISO-8583-SRV-1987.properties" Source="..\ISO-8583-SRV-1987.properties" />
+                        </Component>
+                    </Directory>
+                    <Directory Id="STD1993" Name="1993" />
+                    <Directory Id="STD2003" Name="2003" />
+                </Directory>
+            </Directory>
+        </Directory>
+        <Feature Id="ISO_8583" Title="ISO-8583" Level="1">
+            <Feature Id="Client" Level="1" Title="Client" Description="This is a ISO-8583 client">
+                <ComponentRef Id="Client" />
+            </Feature>
+            <Feature Id="Server" Level="1" Title="Server" Description="This is a ISO-8583 Server">
+                <ComponentRef Id="Server" />
+            </Feature>
+            <Feature Id="DLLs" Level="1" Title="DLLs" TypicalDefault="install">
+                <ComponentRef Id="DTT.dll" />
+                <ComponentRef Id="DTE.dll" />
+                <ComponentRef Id="LIB.DTT" />
+                <ComponentRef Id="LIB.DTE.1987" />
+            </Feature>
+            <Feature Id="STD1987" Level="">
+            </Feature>
+            <ComponentRef Id="Client.properties" />
+            <ComponentRef Id="Server.properties" />
+        </Feature>
+        <UI />
+        <UIRef Id="WixUI_FeatureTree" />
+        <AppId Id="53540CB4-7479-45D1-9B64-BCE9CA915FBE">
+        </AppId>
+        <Property Id="standard" Value="1987" />
+    </Product>
+</Wix>

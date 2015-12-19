@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9EDB6A2C-35E2-488E-A32E-375D07F07FBD}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ISO85831</RootNamespace>
+    <ProjectName>ISO-8583-DTT</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <Import Project="$(SolutionDir)\solution.props" Condition="exists('$(SolutionDir)\solution.props')" Label="solutionPlatform" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <TargetName>$(ProjectName)d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;STD_ISO_8583=2003;ISO_8583_DTT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;STD_ISO_8583=2003;ISO_8583_DTT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;STD_ISO_8583=2003;ISO_8583_DTT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;STD_ISO_8583=2003;ISO_8583_DTT_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\Alphabetic.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\AlphaNumeric.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\AlphaNumericBinary.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\AlphaNumericSpace.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\AlphaNumericSpecial.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\Biinary.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\BinaryInputOutputStream.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\BinaryInputStream.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\BinaryOutputStream.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\Bitmaps.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\Buffer.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\Byte.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\Bytes.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\Century.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\Day.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\endian.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\Exception.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\Hour.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\InputStream.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\ISO-8583-DTT.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\LL.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\LLAlphaNumeric.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\LLAlphaNumericSpace.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\LLAlphaNumericSpecial.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\LLBytes.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\LLL.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\LLLAlphaNumeric.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\LLLAlphaNumericSpecial.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\LLLBytes.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\LLLL.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\LLLLAlphaNumericSpecial.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\LLLLBytes.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\LLNumeric.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\LLNumericSpecial.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\LLPacked.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\LLPackedSpecial.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\Millisecond.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\Minute.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\Month.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\Numeric.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\NumericSpecial.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\OutputStream.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\Packed.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\PackedSpecial.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\Second.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\SignedNumeric.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\signedpacked.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\Year.h" />
+    <ClInclude Include="..\..\..\..\inc\ISO-8583\DTT\Zoned.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\Alphabetic.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\AlphaNumeric.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\AlphaNumericBinary.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\AlphaNumericSpace.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\AlphaNumericSpecial.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\BigDecimal.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\BinaryInputOutputStream.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\BinaryInputStream.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\BinaryOutputStream.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\Bitmaps.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\Buffer.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\Bytes.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\Century.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\Day.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\Exception.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\Hour.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\ISO-8583-DTT.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\LL.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\LLAlphabetic.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\LLAlphaNumeric.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\LLAlphaNumericSpace.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\LLAlphaNumericSpecial.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\LLBytes.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\LLL.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\LLLAlphaNumeric.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\LLLAlphaNumericSpecial.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\LLLBytes.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\LLLL.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\LLLLAlphaNumericSpecial.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\LLLLBytes.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\LLNumeric.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\LLNumericSpecial.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\Millisecond.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\Minute.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\Month.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\Numeric.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\NumericSpecial.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\Second.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\SignedNumeric.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\Year.cpp" />
+    <ClCompile Include="..\..\..\..\code\ISO-8583\DTT\Zoned.cpp" />
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
