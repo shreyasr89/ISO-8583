@@ -21,7 +21,8 @@ environment:
   POCO: C:\Poco\1.6.1
   
   matrix:
-    - builder: make
+#    won't work until the problem of dos command line length > 256 be solved  
+    - builder: make 
 
     - builder: msbuild
       vsver: 120
@@ -43,6 +44,7 @@ install:
            echo "downloading VS2013.Poco.1.6.1.x86.msi"
            mkdir msi | out-null
            appveyor DownloadFile https://github.com/pocoproject/distro/releases/download/Poco-1.6.1/VS2013.Poco.1.6.1.x86.msi -Filename msi\VS2013.Poco.1.6.1.x86.msi
+           echo "installing VS2013.Poco.1.6.1.x86.msi into C:\Poco\1.6.1"
            & cmd /c start /wait  msiexec /a msi\VS2013.Poco.1.6.1.x86.msi /quiet /qn /norestart  TARGETDIR=C:\ /log install.log
         }
 #           c:\cygwin\bin\find.exe $env:POCO
@@ -54,7 +56,6 @@ install:
 
 before_build:
   - set PATH=%POCO%\bin;%PATH%
-  - set
   - ps: |
       if ($env:builder -eq "msbuild")
       {
@@ -67,6 +68,7 @@ before_build:
           & "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" %vc%
         }
       }
+  - set
   
 build:
   
@@ -136,16 +138,31 @@ test_script:
         if ($env:Configuration -eq "debug") { $suffix='d';  }
         Write-host test in $env:Configuration
         
-        $path = ".\cpp\vs2013\$env:configuration\ISO-8583-DTT-Test$suffix.exe";
+        $test='ISO-8583-DTT-Test'
+        Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome  'Running'
+        $path = ".\cpp\vs2013\$env:configuration\$test$suffix.exe";
         $process = Start-Process -NoNewWindow -Wait -FilePath $path -Args "-all" -RSO "cout" -RSE "cerr"
+        $status='Passed';
+        if ($process.ExitCode -gt 0) { $status='Failed' }
+        Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome $status
         gc cout; gc cerr;
         
-        $path = ".\cpp\vs2013\$env:configuration\ISO-8583-DTE-1987-Test$suffix.exe";
+        $test='ISO-8583-DTE-1987-Test'
+        Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome  'Running'
+        $path = ".\cpp\vs2013\$env:configuration\$test$suffix.exe";
         $process = Start-Process -NoNewWindow -Wait -FilePath $path -Args "-all" -RSO "cout" -RSE "cerr"
+        $status='Passed';
+        if ($process.ExitCode -gt 0) { $status='Failed' }
+        Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome $status
         gc cout; gc cerr;
         
-        $path = ".\cpp\vs2013\$env:configuration\ISO-8583-MSG-1987-Test$suffix.exe";
+        $test='ISO-8583-MSG-1987-Test'
+        Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome  'Running'
+        $path = ".\cpp\vs2013\$env:configuration\$test$suffix.exe";
         $process = Start-Process -NoNewWindow -Wait -FilePath $path -Args "-all" -RSO "cout" -RSE "cerr"
+        $status='Passed';
+        if ($process.ExitCode -gt 0) { $status='Failed' }
+        Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome $status
         gc cout; gc cerr;
       
   
