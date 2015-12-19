@@ -14,7 +14,7 @@ platform:
 #  - x64
 
 configuration:
-  - debug
+#  - debug
   - release
  
 environment:
@@ -82,7 +82,7 @@ build_script:
       {
          $env:POCOINC=cygpath "$env:POCO"/inc
          $env:POCOLIB=cygpath "$env:POCO"/lib         
-         make.exe -C cpp/make )
+         make.exe -C cpp/make
       }
    
    
