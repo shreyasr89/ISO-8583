@@ -22,13 +22,12 @@ environment:
   verbosity: minimal
   
   matrix:
+    - builder: make
+
     - builder: msbuild
       vsver: 120
       vc: x86
 
-    - builder: msbuild
-      vsver: 140
-      vc: x86
       
 matrix:
   fast_finish: true  
@@ -45,8 +44,8 @@ install:
            mkdir msi
            appveyor DownloadFile https://github.com/pocoproject/distro/releases/download/Poco-1.6.1/VS2013.Poco.1.6.1.x86.msi -Filename msi\VS2013.Poco.1.6.1.x86.msi
            & cmd /c start /wait  msiexec /a msi\VS2013.Poco.1.6.1.x86.msi /quiet /qn /norestart  TARGETDIR=C:\ /log install.log
-           c:\cygwin\bin\find.exe $env:POCO
         }
+#           c:\cygwin\bin\find.exe $env:POCO
   - ps: |
         if (!(Test-Path "c:\Progra~1\Cppcheck\cppcheck")) {
             echo "usingc:\Progra~1\Cppcheck\cppcheck from cache"
@@ -72,9 +71,9 @@ before_build:
 build:
   
 build_script:
-   msbuild /t:build /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /m /nologo /v:%verbosity% /p:Configuration=%Configuration% /p:Platform=%platform% cpp\vs2013\ISO-8583.sln
-#  - cd cpp
-#  - make.exe -C make   
+   - if %builder%==msbuild (msbuild /t:build /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /m /nologo /v:%verbosity% /p:Configuration=%Configuration% /p:Platform=%platform% cpp\vs2013\ISO-8583.sln)
+   - if %builder%==make    (make.exe -C cpp/make )
+   
    
 after_build:  
 
@@ -119,12 +118,9 @@ after_test:
       Write-Host;Write-Host;
 
 
-on_success:
-  - echo on_success
-
 test_script:
   - ps: |
-      { [string]$suffix=''
+        [string]$suffix=''
         if ($env:Configuration -eq "debug") { $suffix='d';  }
         Write-host test in $env:Configuration
         
@@ -136,17 +132,17 @@ test_script:
         $process = Start-Process -NoNewWindow -Wait -FilePath $path -Args "-all" -RSO "cout" -RSE "cerr"
         gc cout; gc cerr;
         
-        $path = ".\cpp\vs2013\$env:configuration\ISO-8583-MSG-Test$suffix.exe";
+        $path = ".\cpp\vs2013\$env:configuration\ISO-8583-MSG-1987-Test$suffix.exe";
         $process = Start-Process -NoNewWindow -Wait -FilePath $path -Args "-all" -RSO "cout" -RSE "cerr"
         gc cout; gc cerr;
-      }
+      
   
+on_success:
+  - echo on_success
 
-# on build failure
 on_failure:
   - echo on_failure
 
-# after build failure or success
 on_finish:
   - echo on_finish
 
