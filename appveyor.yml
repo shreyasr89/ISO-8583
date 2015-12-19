@@ -30,13 +30,10 @@ matrix:
   fast_finish: true  
 
 install:
-  - c:\cygwin\setup-x86.exe -B -q -n -N -d -l c:\cygwin -R c:\cygwin -s http://mirror.csclub.uwaterloo.ca/cygwin  -P make
-  - c:\cygwin\bin\make.exe --help
-  
-  - c:\cygwin\setup-x86.exe -B -q -n -N -d -l c:\cygwin -R c:\cygwin -s http://mirror.csclub.uwaterloo.ca/cygwin  -P binutils
-  - c:\cygwin\bin\make.exe --help
+  - c:\cygwin\setup-x86.exe -B -q -n -N -d -l c:\cygwin -R c:\cygwin -s http://mirror.csclub.uwaterloo.ca/cygwin  -P gcc
   
   - set PATH=C:\ProgramData\chocolatey\bin;%PATH%
+  - set PATH=C:\cygwin\bin;%PATH%
   - ps: |
         if (Test-Path "C:\Poco\1.6.1") {
             echo "usingC:\Poco\1.6.1 from cache"
@@ -96,7 +93,7 @@ build:
 build_script:
 #   msbuild /t:build /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /m /nologo /v:%verbosity% /p:Configuration=%Configuration% /p:Platform=Win32 cpp\vs2013\ISO-8583.sln
   - cd cpp
-  - make -C make   
+  - make.exe -C make   
    
 after_build:  
 
