@@ -29,8 +29,8 @@ environment:
       vc: x86
 
       
-matrix:
-  fast_finish: true  
+#matrix:
+#  fast_finish: true  
 
 install:
 #  - c:\cygwin\setup-x86.exe -B -q -n -N -d -l c:\cygwin -R c:\cygwin -s http://mirror.csclub.uwaterloo.ca/cygwin  -P gcc
@@ -54,6 +54,8 @@ install:
 
 before_build:
   - set PATH=%POCO%\bin;%PATH%
+  - set POCOINC=%POCO%\inc
+  - set POCOLIB=%POCO%\lib
   - set
   - ps: |
       if ($env:builder -eq "msbuild")
