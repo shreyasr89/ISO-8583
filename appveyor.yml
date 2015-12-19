@@ -14,12 +14,11 @@ platform:
 #  - x64
 
 configuration:
-#  - debug
+  - debug
   - release
  
 environment:
   POCO: C:\Poco\1.6.1
-  verbosity: minimal
   
   matrix:
     - builder: make
@@ -39,8 +38,9 @@ install:
   - set PATH=C:\cygwin\bin;%PATH%
   - ps: |
         if (Test-Path "C:\Poco\1.6.1") {
-            echo "usingC:\Poco\1.6.1 from cache"
+           echo "usingC:\Poco\1.6.1 from cache"
         } else {
+           echo "downloading VS2013.Poco.1.6.1.x86.msi"
            mkdir msi
            appveyor DownloadFile https://github.com/pocoproject/distro/releases/download/Poco-1.6.1/VS2013.Poco.1.6.1.x86.msi -Filename msi\VS2013.Poco.1.6.1.x86.msi
            & cmd /c start /wait  msiexec /a msi\VS2013.Poco.1.6.1.x86.msi /quiet /qn /norestart  TARGETDIR=C:\ /log install.log
@@ -54,8 +54,6 @@ install:
 
 before_build:
   - set PATH=%POCO%\bin;%PATH%
-  - set POCOINC=%POCO%\inc
-  - set POCOLIB=%POCO%\lib
   - set
   - ps: |
       if ($env:builder -eq "msbuild")
@@ -73,8 +71,19 @@ before_build:
 build:
   
 build_script:
-   - if %builder%==msbuild (msbuild /t:build /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /m /nologo /v:%verbosity% /p:Configuration=%Configuration% /p:Platform=%platform% cpp\vs2013\ISO-8583.sln)
-   - if %builder%==make    (make.exe -C cpp/make )
+  - ps: |
+      if ($env:builder -eq "msbuild")
+      {
+        $verbosity='minimal';
+        $logger='C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll';
+        msbuild /t:build /logger:$logger /m /nologo /v:$verbosity /p:Configuration=$env:Configuration /p:Platform=$env:platform cpp\vs2013\ISO-8583.sln
+      }
+      if ($env:builder -eq "make")
+      {
+         $env:POCOINC=cygpath "$env:POCO"/inc
+         $env:POCOLIB=cygpath "$env:POCO"/lib         
+         make.exe -C cpp/make )
+      }
    
    
 after_build:  
