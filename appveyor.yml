@@ -38,7 +38,7 @@ install:
             echo "usingC:\Poco\1.6.1 from cache"
         } else {
            mkdir msi
-           appveyor DownloadFile http://netcologne.dl.sourceforge.net/project/cppcheck/cppcheck/1.71/cppcheck-1.71.zip -Filename msi\VS2013.Poco.1.6.1.x86.msi
+           appveyor DownloadFile https://github.com/pocoproject/distro/releases/download/Poco-1.6.1/VS2013.Poco.1.6.1.x86.msi -Filename msi\VS2013.Poco.1.6.1.x86.msi
            & cmd /c start /wait  msiexec /a msi\VS2013.Poco.1.6.1.x86.msi /quiet /qn /norestart  TARGETDIR=C:\ /log install.log
            c:\cygwin\bin\find.exe $env:POCO
         }
