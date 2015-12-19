@@ -46,9 +46,6 @@ install:
         if (!(Test-Path "c:\Progra~1\Cppcheck\cppcheck")) {
             echo "usingc:\Progra~1\Cppcheck\cppcheck from cache"
         } else {
-           mkdir msi
-           appveyor DownloadFile http://heanet.dl.sourceforge.net/project/cppcheck/cppcheck/1.71/cppcheck-1.71-x86-Setup.msi -Filename msi\cppckeck-1.71-x86.msi
-           & cmd /c start /wait  msiexec /a msi\cppckeck-1.71-x86.msi /quiet /qn /norestart  TARGETDIR=C:\ /log install.log
         }
 
 before_build:
