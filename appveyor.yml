@@ -22,7 +22,7 @@ environment:
   
   matrix:
 #    won't work until the problem of dos command line length > 256 be solved  
-    - builder: make 
+#    - builder: make 
 
     - builder: msbuild
       vsver: 120
@@ -69,6 +69,8 @@ before_build:
         }
       }
   - set
+  - where cl.exe
+  - cl
   
 build:
   
@@ -136,7 +138,7 @@ test_script:
   - ps: |
         [string]$suffix=''
         if ($env:Configuration -eq "debug") { $suffix='d';  }
-        Write-host test in $env:Configuration
+        Write-host -ForegroundColor Yellow test in $env:Configuration
         
         $test='ISO-8583-DTT-Test'
         Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome  'Running'
