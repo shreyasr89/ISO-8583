@@ -9,8 +9,8 @@ cache:
 pull_requests:
   do_not_increment_build_number: true
 
-#platform: 
-#  - Win32
+platform: 
+  - Win32
 #  - x64
 
   
@@ -23,14 +23,15 @@ environment:
   verbosity: minimal
   
   matrix:
-    - builder: 120 
+    - builder: msbuild
+      vsver: 120
       vc: x86
       
 matrix:
   fast_finish: true  
 
 install:
-  - c:\cygwin\setup-x86.exe -B -q -n -N -d -l c:\cygwin -R c:\cygwin -s http://mirror.csclub.uwaterloo.ca/cygwin  -P gcc
+#  - c:\cygwin\setup-x86.exe -B -q -n -N -d -l c:\cygwin -R c:\cygwin -s http://mirror.csclub.uwaterloo.ca/cygwin  -P gcc
   
   - set PATH=C:\ProgramData\chocolatey\bin;%PATH%
   - set PATH=C:\cygwin\bin;%PATH%
@@ -78,22 +79,24 @@ before_build:
   - set PATH=%POCO%\bin;%PATH%
   - set
   - ps: |
-      if ($env:builder -eq "120")
+      if ($env:builder -eq "msbuild")
       {
-        & "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" %vc%
+        if ($env:vsver -eq "120")
+        {
+          & "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\vcvarsall.bat" %vc%
+        }
+        if ($env:vsver -eq "140")
+        {
+          & "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" %vc%
+        }
       }
-      if ($env:builder -eq "140")
-      {
-        & "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" %vc%
-      }
-      $host.SetShouldExit(0)
   
 build:
   
 build_script:
-#   msbuild /t:build /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /m /nologo /v:%verbosity% /p:Configuration=%Configuration% /p:Platform=Win32 cpp\vs2013\ISO-8583.sln
-  - cd cpp
-  - make.exe -C make   
+   msbuild /t:build /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /m /nologo /v:%verbosity% /p:Configuration=%Configuration% /p:Platform=%platform% cpp\vs2013\ISO-8583.sln
+#  - cd cpp
+#  - make.exe -C make   
    
 after_build:  
 
