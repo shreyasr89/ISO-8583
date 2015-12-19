@@ -80,8 +80,8 @@ build_script:
       }
       if ($env:builder -eq "make")
       {
-         $env:POCOINC=cygpath "$env:POCO"/inc
-         $env:POCOLIB=cygpath "$env:POCO"/lib         
+         $env:POCOINC=cygpath "$env:POCO" + "/inc"
+         $env:POCOLIB=cygpath "$env:POCO" + "/lib"         
          make.exe -C cpp/make
       }
    
