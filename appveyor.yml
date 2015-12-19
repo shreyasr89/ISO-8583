@@ -41,7 +41,7 @@ install:
            echo "usingC:\Poco\1.6.1 from cache"
         } else {
            echo "downloading VS2013.Poco.1.6.1.x86.msi"
-           mkdir msi
+           mkdir msi | out-null
            appveyor DownloadFile https://github.com/pocoproject/distro/releases/download/Poco-1.6.1/VS2013.Poco.1.6.1.x86.msi -Filename msi\VS2013.Poco.1.6.1.x86.msi
            & cmd /c start /wait  msiexec /a msi\VS2013.Poco.1.6.1.x86.msi /quiet /qn /norestart  TARGETDIR=C:\ /log install.log
         }
@@ -81,8 +81,8 @@ build_script:
       if ($env:builder -eq "make")
       {
          $path=cygpath "$env:POCO";
-         $env:POCOINC=$p + '/inc';
-         $env:POCOLIB=$p + '/lib';       
+         $env:POCOINC=$path + '/inc';
+         $env:POCOLIB=$path + '/lib';       
          make.exe -C cpp/make
       }
    
