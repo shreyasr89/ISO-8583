@@ -75,9 +75,10 @@ before_build:
         }
         popd
         write-host "`nVisual Studio $env:vsver Command Prompt variables set." -ForegroundColor Yellow
+        where cl.exe
+        cl
       }
   - set
-  - where cl.exe
   - cl
   
 build:
