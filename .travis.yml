@@ -6,9 +6,10 @@ cache:
 
 before_install:
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test 
-  - sudo apt-get update -qq
+  - sudo add-apt-repository -y ppa:zosrothko/poco 
 #  - sudo apt-get install -qq -y g++-4.8 sloccount cppcheck
   - sudo apt-get install -qq -y libpoco-dev
+  - sudo apt-get update -qq
   - sudo ldconfig  
   - export CC="gcc-4.8"
   - export CXX="g++-4.8"
@@ -30,8 +31,8 @@ env:
 before_script:
  - uname -a
  - echo ${TEST_NAME}
-# - dpkg -L libpoco-dev
-# - ls -l /usr/lib/*Poco*
+ - dpkg -L libpoco-dev
+ - ls -l /usr/lib/*Poco*
  - g++ -O0 -g3 -dM -E - < /dev/null | sort
  - find /usr -name "*Foundation*"
 
@@ -40,20 +41,9 @@ matrix:
     - env:    TEST_NAME="gcc (make)"
       compiler: gcc
       script:
-#       - type travis_jigger
-#       - type travis_wait
-       - cat ./echo.sh
-       - chmod 755 echo.sh
-       - ls -l ./echo.sh
-       - ./echo.sh a b c 
-       - trap -p
-       - trap SIGINT
-       - trap -p
-       - travis_wait 10 ./echo.sh a b c
-#      - make -C cpp/make
- 
-#        - ./travis/runtests.sh
-    
+      - make -C cpp/make
+
+  
 
     # TODO osx build
     # TODO run test suite
