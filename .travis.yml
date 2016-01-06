@@ -7,17 +7,15 @@ cache:
 before_install:
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test 
   - sudo add-apt-repository -y ppa:zosrothko/poco 
-#  - sudo apt-get install -qq -y  sloccount cppcheck
-  - sudo apt-get install -qq -y g++-4.8 libpoco-dev
   - sudo apt-get update -qq
+  - sudo apt-get install -qq -y libpoco-dev g++-4.8
+  - sudo apt-get install -qq -y  sloccount cppcheck
   - sudo ldconfig  
   - export CC="gcc-4.8"
   - export CXX="g++-4.8"
 
 #services:
   
-#notifications:
-#  slack: zosrothko:NTK36zinPWLjXgXUpNqB
 
 notifications:
   slack: 
