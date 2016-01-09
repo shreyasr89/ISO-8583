@@ -149,28 +149,37 @@ test_script:
         $test='ISO-8583-DTT-Test'
         Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome  'Running'
         $path = ".\cpp\vs2013\$env:configuration\$test$suffix.exe";
+        $started = Get-Date
         $process = Start-Process -NoNewWindow -Wait -FilePath $path -Args "-all" -RSO "cout" -RSE "cerr"
+        $ended   = Get-Date
+        $millisec = ($ended - $started).totalmilliseconds
         $status='Passed';
         if ($process.ExitCode -gt 0) { $status='Failed' }
-        Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome $status
+        Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome $status -Duration $millisec
         gc cout; gc cerr;
         
         $test='ISO-8583-DTE-1987-Test'
         Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome  'Running'
         $path = ".\cpp\vs2013\$env:configuration\$test$suffix.exe";
+        $started = Get-Date
         $process = Start-Process -NoNewWindow -Wait -FilePath $path -Args "-all" -RSO "cout" -RSE "cerr"
+        $ended   = Get-Date
+        $millisec = ($ended - $started).totalmilliseconds
         $status='Passed';
         if ($process.ExitCode -gt 0) { $status='Failed' }
-        Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome $status
+        Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome $status -Duration $millisec
         gc cout; gc cerr;
         
         $test='ISO-8583-MSG-1987-Test'
         Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome  'Running'
         $path = ".\cpp\vs2013\$env:configuration\$test$suffix.exe";
+        $started = Get-Date
         $process = Start-Process -NoNewWindow -Wait -FilePath $path -Args "-all" -RSO "cout" -RSE "cerr"
         $status='Passed';
+        $ended   = Get-Date
+        $millisec = ($ended - $started).totalmilliseconds
         if ($process.ExitCode -gt 0) { $status='Failed' }
-        Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome $status
+        Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome $status -Duration $millisec
         gc cout; gc cerr;
       
   

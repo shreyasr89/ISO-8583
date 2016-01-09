@@ -31,9 +31,6 @@ before_script:
  - uname -a
  - echo ${TEST_NAME}
  - dpkg -L libpoco-dev
- - ls -l /usr/lib/*Poco*
- - g++ -O0 -g3 -dM -E - < /dev/null | sort
- - find /usr -name "*Foundation*"
 
 matrix:
   include:
