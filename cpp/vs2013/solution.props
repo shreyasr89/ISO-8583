@@ -1,17 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?> 
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ImportGroup Label="PropertySheets" />
-  <PropertyGroup Label="UserMacros" >
-  <!--
-    <Poco>C:\Program Files (x86)\Poco\1.6.1</Poco>
-  -->
+  <PropertyGroup Label="UserMacros" Condition="'$(Platform)'=='Win32'">
     <Poco>$(POCO)</Poco>
+    <OpenSSL >C:\OpenSSL-Win32</OpenSSL>
+  </PropertyGroup>
+  <PropertyGroup Label="UserMacros" Condition="'$(Platform)'=='x64'">
+    <Poco>C:\Program Files (x86)\Poco\1.6.1</Poco>
+    <OpenSSL >C:\OpenSSL-Win64</OpenSSL>
   </PropertyGroup>
   <PropertyGroup Label="PropertySheets">
-<!--
-    <IncludePath>$(SolutionDir)/../inc;$(Poco)\NetSSL_Win\include;$(Poco)\Net\include;$(Poco)\Util\include;$(Poco)\XML\include;$(Poco)\Foundation\include;$(Poco)\CppUnit\include;$(IncludePath)</IncludePath>
--->
-    <IncludePath>$(SolutionDir)/../inc;$(Poco)\inc;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)/../inc;$(ISO-8583)/cpp/inc;$(Poco)\inc;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)/$(Configuration);$(Poco)\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup />
