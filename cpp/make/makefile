@@ -53,7 +53,7 @@ TSTDIR		:= $(ROOT)/test
 INCDIR		:= $(ROOT)/inc
 
 
-BUILD       ?= Debug
+BUILD       ?= Release
 $(info  BUILD=$(BUILD))
 ifeq ($(BUILD), Debug)
 SUFFIX  	:= d

@@ -26,7 +26,9 @@ environment:
 
     - builder: msbuild
       vsver: 120
-      vc: x86
+
+    - builder: msbuild
+      vsver: 140
 
       
 #matrix:
@@ -39,7 +41,7 @@ install:
   - set PATH=C:\cygwin\bin;%PATH%
   - ps: |
         if (Test-Path "C:\Poco\1.6.1") {
-           echo "usingC:\Poco\1.6.1 from cache"
+           echo "using C:\Poco\1.6.1 from cache"
         } else {
            echo "downloading VS2013.Poco.1.6.1.x86.msi"
            mkdir msi | out-null
@@ -50,7 +52,7 @@ install:
 #           c:\cygwin\bin\find.exe $env:POCO
   - ps: |
         if (!(Test-Path "c:\Progra~1\Cppcheck\cppcheck")) {
-            echo "usingc:\Progra~1\Cppcheck\cppcheck from cache"
+            echo "using c:\Progra~1\Cppcheck\cppcheck from cache"
         } else {
         }
 
