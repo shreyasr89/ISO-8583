@@ -2,20 +2,36 @@
 ISO-8583 is targeted to run on major Linuces using gcc 4.8 and Windows using VS 2013.
 
 2/ Requirements
-ISO-8583 is using the Poco library version 1.6.2. Thus a pre requirement is to
+ISO-8583 is using the Poco library version 1.6.1. Thus a pre requirement is to
 get Poco working on your platform, either by installing a pre packaged build or building your self
 from the git repository: https://github.com/pocoproject/poco.git
-
+OpenSSL is also required for secure TCP/IP communication
 
 3/ Building ISO-8583 on Windows with VS2013 or VS2013 Express edition.
 
-a) Building
-  Install or build Poco 1.6.2
+a) Install poco 1.6.1.
+---------------------
+  Download https://github.com/pocoproject/distro/releases/download/Poco-1.6.1/VS2013.Poco.1.6.1.x86.msi
+  Install by running the msi installer: msiexec VS2013.Poco.1.6.1.x86.msi
+  
+b) Install OpenSSL.
+------------------
+    Download https://slproweb.com/download/Win32OpenSSL-1_0_2e.exe
+    Install it by running the executable
+    Verify that OpenSSL is installed at C:\OpenSSL-Win32
+    
+    Download https://slproweb.com/download/Win64OpenSSL-1_0_2e.exe
+    Install it by running the executable
+    Verify that OpenSSL is installed at C:\OpenSSL-Win64
+    
+c) Building.
+-----------
   Define a global variable POCO pointing at the Poco master directory
-  Open the IOS-8583/ISO-8583.sln
+  Open the ISO-8583/ISO-8583.sln
   Build Debug and Release version
 
-b) Running the demo with the debug version.
+d) Running the demo with the debug version.
+-------------------------------------------
   Open a DOS windows at ISO-8583/cpp/vc2013/Debug
   Add the directory $(POCO)/bin to PATH
   If Poco was build from source
@@ -37,13 +53,19 @@ b) Running the demo with the debug version.
 
 
 4/ Building on Linuces
+----------------------
+a) Install poco 1.6.1 on Ubuntu
+  add-apt-repository -y ppa:zosrothko/poco 
+  apt-get update -qq
+  apt-get install -qq -y libpoco-dev g++-4.8
+  export CC="gcc-4.8"
+  export CXX="g++-4.8"
 
-a) Building and unit testing
-  Install or build Poco 1.6.2
+b) Building and unit testing
   Define a global variable POCO pointing at the Poco master directory
   Open a terminal at ISO-8583/cpp
-  Build by launching make-C make;make -C make tests;
-  run make -C make runtests 
+  Build by: 		make-C make;make -C make tests;
+  Run the tests: 	make -C make runtests 
   
  b) running the demo
   Open a new terminal
@@ -70,7 +92,7 @@ a) Building and unit testing
 5/ Specialization of the ISO-8583 messages
 All ISO-8583 messages have a standard minimal implementation located in the ISO-8583/MSG library. 
 
-One can specialize each of those messages by building a specilized USER library taking the ISO-8583/DFT library
+One can specialize each of those messages by building a specialized USER library taking the ISO-8583/DFT library
 as a staring point. Have a look at ISO-8583/DFT source code. 
 
 You can configure the client ISO-8583-CLI-1987 and the server ISO-8583-1987 to use your own

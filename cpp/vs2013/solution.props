@@ -6,7 +6,7 @@
     <OpenSSL >C:\OpenSSL-Win32</OpenSSL>
   </PropertyGroup>
   <PropertyGroup Label="UserMacros" Condition="'$(Platform)'=='x64'">
-    <Poco>C:\Program Files (x86)\Poco\1.6.1</Poco>
+    <Poco>$(POCO)</Poco>
     <OpenSSL >C:\OpenSSL-Win64</OpenSSL>
   </PropertyGroup>
   <PropertyGroup Label="PropertySheets">
