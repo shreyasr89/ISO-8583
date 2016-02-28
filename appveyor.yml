@@ -183,7 +183,32 @@ test_script:
         if ($process.ExitCode -gt 0) { $status='Failed' }
         Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome $status -Duration $millisec
         gc cout; gc cerr;
-      
+
+        $test='ISO-8583-SRV-1987'
+        Add-AppveyorTest  -Name $test -Outcome  'Running'
+        $path = ".\cpp\vs2013\$env:configuration\$test$suffix.exe";
+        $started = Get-Date
+        $process = Start-Process -NoNewWindow -FilePath $path -RSO "cout" -RSE "cerr"
+        $status='Passed';
+        $ended   = Get-Date
+        $millisec = ($ended - $started).totalmilliseconds
+        if ($process.ExitCode -gt 0) { $status='Failed' }
+        Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome $status -Duration $millisec
+        gc cout; gc cerr;
+
+        $test='ISO-8583-CLI-1987'
+        Add-AppveyorTest -Framework 'CppUnit' -Name $test -Outcome  'Running'
+        $path = ".\cpp\vs2013\$env:configuration\$test$suffix.exe";
+        $started = Get-Date
+        $process = Start-Process -NoNewWindow -Wait -FilePath $path -RSO "cout" -RSE "cerr"
+        $status='Passed';
+        $ended   = Get-Date
+        $millisec = ($ended - $started).totalmilliseconds
+        if ($process.ExitCode -gt 0) { $status='Failed' }
+        Add-AppveyorTest  -Name $test -Outcome $status -Duration $millisec
+        gc cout; gc cerr;
+  
+		    
   
 on_success:
   - echo on_success
