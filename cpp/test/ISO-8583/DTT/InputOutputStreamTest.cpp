@@ -150,7 +150,7 @@ namespace ISO_8583 {
 
 			rw.flip();
 
-			no = c = s = i = l = uc = us = ui = ul = 0;
+			no = c = 0, s = i = 0, l = uc = 0, us = ui = 0, ul = 0;
 
 			rw >> c; 
 			rw >> s;
