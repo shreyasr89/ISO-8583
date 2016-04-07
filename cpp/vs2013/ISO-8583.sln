@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2013 for Windows Desktop
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "code", "code", "{96475BBE-3182-421D-B7F4-8FDD17E5C659}"
 EndProject
@@ -24,6 +24,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\..\.gitattributes = ..\..\.gitattributes
 		..\..\.gitignore = ..\..\.gitignore
 		..\..\.travis.yml = ..\..\.travis.yml
+		..\..\appveyor.yml = ..\..\appveyor.yml
 		solution.props = solution.props
 	EndProjectSection
 EndProject
@@ -135,6 +136,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ISO-8583-MSG-1987-Test", "t
 		{EE854C6B-4290-4362-8C66-CB558BB86C82} = {EE854C6B-4290-4362-8C66-CB558BB86C82}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CLI", "CLI", "{B8194882-AD56-46F7-BF37-0AD1DA128371}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SRV", "SRV", "{21B7F9BD-F8E8-419F-BA7A-782029666BB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1987", "1987", "{AF06BD36-13E5-45DF-ADBF-977D89C5936D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -231,5 +238,8 @@ Global
 		{6FB41195-D32A-487E-935D-BB245B3423B0} = {9F61ED17-52A7-4E21-988A-6015F94A3D33}
 		{351B8C65-C5E7-4B3E-8F2D-F5513A358BBA} = {7F67EE75-D0EF-4946-A99B-93E540BEE8B6}
 		{890F94D7-FC1E-47A4-BB71-F51E534BFF8A} = {9507EA9C-EC5F-49A8-A4A6-BC8A28835E64}
+		{B8194882-AD56-46F7-BF37-0AD1DA128371} = {86C63BA9-E15B-4E8D-82F1-526C9152B28F}
+		{21B7F9BD-F8E8-419F-BA7A-782029666BB6} = {86C63BA9-E15B-4E8D-82F1-526C9152B28F}
+		{AF06BD36-13E5-45DF-ADBF-977D89C5936D} = {21B7F9BD-F8E8-419F-BA7A-782029666BB6}
 	EndGlobalSection
 EndGlobal

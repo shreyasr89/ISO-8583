@@ -53,7 +53,7 @@ TSTDIR		:= $(ROOT)/test
 INCDIR		:= $(ROOT)/inc
 
 
-BUILD       ?= Debug
+BUILD       ?= Release
 $(info  BUILD=$(BUILD))
 ifeq ($(BUILD), Debug)
 SUFFIX  	:= d
@@ -117,14 +117,12 @@ POCOLIBS 		+= -lPocoFoundation$(SUFFIX)
 POCOLIBS 		+= -lPocoNet$(SUFFIX)
 POCOLIBS 		+= -lPocoUtil$(SUFFIX)
 POCOLIBS 		+= -lPocoXML$(SUFFIX) 
-POCOLIBS 		+= -lCppUnit$(SUFFIX) 
 else
 POCOLIBS 		= -L $(POCOLIBDIR) 
 POCOLIBS 		+= -lPocoFoundation$(SUFFIX) 
 POCOLIBS 		+= -lPocoNet$(SUFFIX) 
 POCOLIBS 		+= -lPocoUtil$(SUFFIX) 
 POCOLIBS 		+= -lPocoXML$(SUFFIX) 
-POCOLIBS 		+= -lCppUnit$(SUFFIX) 
 endif
 
 
