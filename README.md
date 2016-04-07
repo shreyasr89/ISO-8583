@@ -1,9 +1,7 @@
 # ISO-8583
 
 - Travis: [![Travis Build Status](https://travis-ci.org/Kampbell/ISO-8583.png?branch=develop)](https://travis-ci.org/Kampbell/ISO-8583)
-- AppVeyor: [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/eiykjt4t6sma66mdp3j3)](https://ci.appveyor.com/project/zosrothko/ISO-8583)
-
-
+- AppVeyor: [![Build status](https://ci.appveyor.com/api/projects/status/jtm0ufyey61w7bce/branch/develop?svg=true)](https://ci.appveyor.com/project/zosrothko/iso-8583-c86bg/branch/develop)
 A C++ implementation of the ISO-8583 financial norm (it's ISO).
 
 Supported versions:
