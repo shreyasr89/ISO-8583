@@ -9,8 +9,11 @@ Supported versions:
 	ISO-8583-1:1993
 	ISO-8583-1:2003
 
-*==== WARNING ====*
-This is work in progress. So there are missing functionalities and ton of bugs.
+*==== WARNING ====*  
+This is work in progress. So there are missing functionalities and ton of bugs.  
+
+Demo: a simple Client/Server demo for multiple AuthorizationRequest/Response is working.
+
 See code/README for building and running.
 
 Contributors are welcome.
